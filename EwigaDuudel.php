@@ -2,6 +2,14 @@
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <?php
+  include 'CHTMLOut.php';
+  include 'CFormHandler.php';
+  include 'CCookie.php';
+  include 'CDoodleTable.php';
+
+  $HTML = new HTMLOut();
+  $Cookie = new Cookie();
+
   $weekdays="So,Mo,Di,Mi,Do,Fr,Sa,So,Mo,Di,Mi,Do,Fr,Sa,So";
   $weekdays=explode(",",$weekdays);
 
@@ -51,7 +59,7 @@
     }
     fclose($fs);
   }
-  
+
   function CleanEntry($Entry) {
    $val = trim($Entry);
    $val = trim($val , ",");
@@ -94,11 +102,20 @@
       EditLine($datestring);
   }
 
-  echo ("<html xmlns='http://www.w3.org/1999/xhtml'>\n<head>\n<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
-          <title>Ewiger Doodle</title>\n</head>\n
-            <body>\n<h1>Ewiger Doodle</h1><h2>You are logged on as ". $Cookiename . "</h2>\n<form id='Klimperform' method='post' action='' >\n");
+  echo $HTML->GetHeader();
+  echo $HTML->GetPageTitle("Ewiger Doodle");
+  echo "<h2>You are logged on as ". $Cookiename . "</h2>\n";
+
   echo (" Server Date " . date(r));
   echo ("<p>You can stay logged on if you want to.</p>\n");
+
+  $Form = new FormHandler("post", "Klimperform");
+
+//   echo ("<html xmlns='http://www.w3.org/1999/xhtml'>\n<head>\n<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
+//           <title>Ewiger Doodle</title>\n</head>\n
+//             <body>\n<h1>Ewiger Doodle</h1><h2>You are logged on as ". $Cookiename . "</h2>\n<form id='Klimperform' method='post' action='' >\n");
+//   echo (" Server Date " . date(r));
+//   echo ("<p>You can stay logged on if you want to.</p>\n");
   $weekday = date(N);
   $data = file("mydata.csv"); //or die('Could not read file!');
   echo ("<table border=\"1\" cellspacing=\"0\" cellpadding=\"2\">\n");
@@ -130,7 +147,7 @@
     echo("</tr>\n");
   }
   if ($Occurs=="0") {
-    echo ("<tr>
+  	echo ("<tr>
          <td>" . $Cookiename ."</td>
          <td><input type='text' name='ck1' /></td>\n
          <td><input type='text' name='ck2' /></td>\n
@@ -154,8 +171,9 @@
   echo("</table>");
   echo("<p><input type='submit' name='formSubmit' value='Submit' /></p>\n
         <p><input type='submit' name='formLogout' value='Logout' /></p>\n");
-//    <p> <!--input type='submit' name='formAdvance' value='Advance' / --> </p>  
+//    <p> <!--input type='submit' name='formAdvance' value='Advance' / --> </p>
   echo("</form>\n</html>\n\n");
 
+  $HTML->ClosingHtml();
 ?>
 
