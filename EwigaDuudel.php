@@ -71,19 +71,19 @@
    return $val;
   }
 
-  if ($_POST['formAdvance'] == "Advance") {
+  if (@$_POST['formAdvance'] == "Advance") {
     AdvanceADay();
   }
   $lastaccess = file("lastaccess.csv");
   $lastaccess = trim($lastaccess{0});
-  $todaysday = date(z);
+  $todaysday = @date(z);
   while($lastaccess != $todaysday) {
     AdvanceADay();
     $lastaccess = $lastaccess + 1;
   }
   $fs = fopen("lastaccess.csv","w"); fwrite($fs,$todaysday); fclose($fs);
 
-  if ($_POST['formLogout'] == "Logout") {
+  if (@$_POST['formLogout'] == "Logout") {
     setcookie ("KlimperName", "", time() - 3600);  // Clear Cookie
     header("Location: Login.php");
   }
@@ -92,13 +92,13 @@
     header("Location: Login.php");
   }
   $Editrequest="0";
-  if ($_POST['formEdit'] == "Edit") {
+  if (@$_POST['formEdit'] == "Edit") {
     $Editrequest="1";
   }
 
   $Cookiename = ucfirst(strtolower($Cookiename));
 
-  if($_POST['formSubmit'] == "Submit") {
+  if(@$_POST['formSubmit'] == "Submit") {
       $datestring = $Cookiename . CleanEntry($_POST['ck1']) . CleanEntry($_POST['ck2']) . CleanEntry($_POST['ck3']) .
                     CleanEntry($_POST['ck4']) . CleanEntry($_POST['ck5']) . CleanEntry($_POST['ck6']);
       EditLine($datestring);
@@ -108,7 +108,7 @@
   echo $HTML->GetPageTitle("Ewiger Doodle");
   echo "<h2>You are logged on as ". $Cookiename . "</h2>\n";
 
-  echo (" Server Date " . date(r));
+  echo (" Server Date " . @date(r));
   echo ("<p>You can stay logged on if you want to.</p>\n");
 
   $Form = new FormHandler("post", "Klimperform");
@@ -119,7 +119,7 @@
 //     echo ("<form id='Klimperform' method='post' action='' >\n");
 //   echo (" Server Date " . date(r));
 //   echo ("<p>You can stay logged on if you want to.</p>\n");
-  $weekday = date(N);
+  $weekday = @date(N);
   $data = file("mydata.csv"); //or die('Could not read file!');
   echo ("<table border=\"1\" cellspacing=\"0\" cellpadding=\"2\">\n");
   echo ('<colgroup><col width="200"><col width="180"><col width="180"><col width="180"><col width="180"><col width="180"><col width="180"></colgroup>');
@@ -144,7 +144,8 @@
       echo ("<td ". $color . ">". $element ."</td>");
     }
     if ($linearray[0] == $Cookiename) {
-      echo("<td><input type='submit' name='formEdit' value='Edit' /></td>"); $Occurs="1";
+      //echo("<td><input type='submit' name='formEdit' value='Edit' /></td>"); $Occurs="1";
+      $Form->AddElement("submit", "formEdit", "Edit");
       $linearraytoedit=$linearray;
     }
     echo("</tr>\n");
@@ -185,8 +186,8 @@
 //   echo("<p><input type='submit' name='formSubmit' value='Submit' /></p>\n
 //         <p><input type='submit' name='formLogout' value='Logout' /></p>\n");
 //    <p> <!--input type='submit' name='formAdvance' value='Advance' / --> </p>
-  echo("</form>\n</html>\n\n");
+//  echo("</form>\n</html>\n\n");
 
-//  $HTML->ClosingHtml();
+  echo $HTML->ClosingHtml();
 ?>
 
