@@ -7,7 +7,7 @@ class Cookie
   public function Cookie()
   {
     $this->Cookiename = $_COOKIE["KlimperName"];
-    $this->Cookiename = trim($Cookiename);
+    $this->Cookiename = @trim($Cookiename);
   }
 
   public function CheckCookieExists()
