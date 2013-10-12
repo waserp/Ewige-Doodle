@@ -113,7 +113,8 @@
 
 //   echo ("<html xmlns='http://www.w3.org/1999/xhtml'>\n<head>\n<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
 //           <title>Ewiger Doodle</title>\n</head>\n
-//             <body>\n<h1>Ewiger Doodle</h1><h2>You are logged on as ". $Cookiename . "</h2>\n<form id='Klimperform' method='post' action='' >\n");
+//             <body>\n<h1>Ewiger Doodle</h1><h2>You are logged on as ". $Cookiename . "</h2>\n";
+     echo ("<form id='Klimperform' method='post' action='' >\n");
 //   echo (" Server Date " . date(r));
 //   echo ("<p>You can stay logged on if you want to.</p>\n");
   $weekday = date(N);
@@ -174,6 +175,6 @@
 //    <p> <!--input type='submit' name='formAdvance' value='Advance' / --> </p>
   echo("</form>\n</html>\n\n");
 
-  $HTML->ClosingHtml();
+//  $HTML->ClosingHtml();
 ?>
 
