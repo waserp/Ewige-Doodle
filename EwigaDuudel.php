@@ -7,6 +7,8 @@
   include 'CCookie.php';
   include 'CDoodleTable.php';
 
+  define("AMOUNT_OF_DAYS", "6");
+
   $HTML = new HTMLOut();
   $Cookie = new Cookie();
 
@@ -114,7 +116,7 @@
 //   echo ("<html xmlns='http://www.w3.org/1999/xhtml'>\n<head>\n<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
 //           <title>Ewiger Doodle</title>\n</head>\n
 //             <body>\n<h1>Ewiger Doodle</h1><h2>You are logged on as ". $Cookiename . "</h2>\n";
-     echo ("<form id='Klimperform' method='post' action='' >\n");
+//     echo ("<form id='Klimperform' method='post' action='' >\n");
 //   echo (" Server Date " . date(r));
 //   echo ("<p>You can stay logged on if you want to.</p>\n");
   $weekday = date(N);
@@ -148,30 +150,40 @@
     echo("</tr>\n");
   }
   if ($Occurs=="0") {
-  	echo ("<tr>
-         <td>" . $Cookiename ."</td>
-         <td><input type='text' name='ck1' /></td>\n
-         <td><input type='text' name='ck2' /></td>\n
-         <td><input type='text' name='ck3' /></td>\n
-         <td><input type='text' name='ck4' /></td>\n
-         <td><input type='text' name='ck5' /></td>\n
-         <td><input type='text' name='ck6' /></td>\n
-         </tr>");
+		for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
+			$Form->AddElement("text", "ck".$Day, "");
+		}
+
+//   	echo ("<tr>
+//          <td>" . $Cookiename ."</td>
+//          <td><input type='text' name='ck1' /></td>\n
+//          <td><input type='text' name='ck2' /></td>\n
+//          <td><input type='text' name='ck3' /></td>\n
+//          <td><input type='text' name='ck4' /></td>\n
+//          <td><input type='text' name='ck5' /></td>\n
+//          <td><input type='text' name='ck6' /></td>\n
+//          </tr>");
   }
   if ($Editrequest=="1") {
-    echo ("<tr>
-         <td>" . $Cookiename ."</td>
-         <td><input type='text' name='ck1' value = '" . $linearraytoedit[1] ."' /></td>\n
-         <td><input type='text' name='ck2' value = '" . $linearraytoedit[2] ."' /></td>\n
-         <td><input type='text' name='ck3' value = '" . $linearraytoedit[3] ."' /></td>\n
-         <td><input type='text' name='ck4' value = '" . $linearraytoedit[4] ."' /></td>\n
-         <td><input type='text' name='ck5' value = '" . $linearraytoedit[5] ."' /></td>\n
-         <td><input type='text' name='ck6' value = '" . $linearraytoedit[6] ."' /></td>\n
-         </tr>");
+  		for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
+			$Form->AddElement("text", "ck".$Day, " . $linearraytoedit[$Day] .");
+		}
+//   	echo ("<tr>
+//          <td>" . $Cookiename ."</td>
+//          <td><input type='text' name='ck1' value = '" . $linearraytoedit[1] ."' /></td>\n
+//          <td><input type='text' name='ck2' value = '" . $linearraytoedit[2] ."' /></td>\n
+//          <td><input type='text' name='ck3' value = '" . $linearraytoedit[3] ."' /></td>\n
+//          <td><input type='text' name='ck4' value = '" . $linearraytoedit[4] ."' /></td>\n
+//          <td><input type='text' name='ck5' value = '" . $linearraytoedit[5] ."' /></td>\n
+//          <td><input type='text' name='ck6' value = '" . $linearraytoedit[6] ."' /></td>\n
+//          </tr>");
   }
+  $Form->AddElement("submit", "formSubmit", "Submit");
+  $Form->AddElement("submit", "formLogout", "Logout");
+  echo $Form->GetForm();
   echo("</table>");
-  echo("<p><input type='submit' name='formSubmit' value='Submit' /></p>\n
-        <p><input type='submit' name='formLogout' value='Logout' /></p>\n");
+//   echo("<p><input type='submit' name='formSubmit' value='Submit' /></p>\n
+//         <p><input type='submit' name='formLogout' value='Logout' /></p>\n");
 //    <p> <!--input type='submit' name='formAdvance' value='Advance' / --> </p>
   echo("</form>\n</html>\n\n");
 

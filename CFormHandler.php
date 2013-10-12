@@ -39,7 +39,7 @@ class FormHandler
 		return "<form method='" . $this->m_Methode . "' id='" . $this->m_ID . "' action='" . $this->m_Action . "'>\n";
 	}
 
-	public function GetFormEnd()
+	private function GetFormEnd()
 	{
 		return "</form>";
 	}
