@@ -10,8 +10,9 @@ class testFormHandler extends PHPUnit_Framework_TestCase
 		$T = new FormHandler("post", "myID");
 
 		$Expected = $this->ConcatForm("");
+		$Actual = $T->StartForm() . $T->CloseForm();
 
-		$this->assertEquals($Expected, $T->GetForm());
+		$this->assertEquals($Expected, $Actual);
 	}
 
 	public function testOneInput()
@@ -19,7 +20,6 @@ class testFormHandler extends PHPUnit_Framework_TestCase
 		$T = new FormHandler("post", "myID");
 		$T->AddElement("text", "TestElement", "TestName");
 		$Expected = "<input type='text' name='TestElement' value='TestName'/>\n";
-		$Expected = $this->ConcatForm($Expected);
 		$this->assertEquals($Expected, $T->GetForm());
 	}
 
@@ -31,7 +31,6 @@ class testFormHandler extends PHPUnit_Framework_TestCase
 
 		$Expected = "<input type='text' name='TestElement' value='TestName'/>\n";
 		$Expected .= "<input type='text' name='TestElement1' value='TestName1'/>\n";
-		$Expected = $this->ConcatForm($Expected);
 
 		$this->assertEquals($Expected, $T->GetForm());
 	}
@@ -42,7 +41,6 @@ class testFormHandler extends PHPUnit_Framework_TestCase
 		$T->AddElement("submit", "OK", "ok");
 
 		$Expected = "<input type='submit' name='OK' value='ok'/>\n";
-		$Expected = $this->ConcatForm($Expected);
 
 		$this->assertEquals($Expected, $T->GetForm());
 	}

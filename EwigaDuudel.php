@@ -111,6 +111,8 @@
   echo (" Server Date " . @date(r));
   echo ("<p>You can stay logged on if you want to.</p>\n");
 
+  $Table = new DoodleTable();
+
   $Form = new FormHandler("post", "Klimperform");
 
 //   echo ("<html xmlns='http://www.w3.org/1999/xhtml'>\n<head>\n<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
@@ -124,15 +126,21 @@
   echo ("<table border=\"1\" cellspacing=\"0\" cellpadding=\"2\">\n");
   echo ('<colgroup><col width="200"><col width="180"><col width="180"><col width="180"><col width="180"><col width="180"><col width="180"></colgroup>');
   echo ("<tr style=\"background-color:#E0EFEF\"><td>Klimper</td>");
+  $Table->AddSingleCell("Klimper");
   for ($i = $weekday; $i <= ($weekday + 5); $i++) {
     echo ("<td>" . $weekdays[$i] . "</td>");
+		$Table->AddSingleCell($weekdays[$i]);
   }
+  $Table->AddHeader($Table->GetCellArray());
+
   echo("</tr>\n");
+
   $Occurs="0";
   foreach ($data as $line) {
     echo ("<tr>");
     //echo $line."<br>";
     $linearray = explode(",",$line);
+    $FirstRow = true;
     foreach ($linearray as $element) {
       //echo $element . " -- ";
       $element = trim($element);
@@ -142,18 +150,28 @@
         $color = "style=\"background-color:#FF8080\"";
       }
       echo ("<td ". $color . ">". $element ."</td>");
+// 			if ($FirstRow) {
+// 				$Klimper = $element;
+// 				$FirstRow = false;
+// 			} else {
+				$Table->AddSingleCell($element);
+//			}
     }
+    $Table->AddRow($Table->GetCellArray());
     if ($linearray[0] == $Cookiename) {
-      //echo("<td><input type='submit' name='formEdit' value='Edit' /></td>"); $Occurs="1";
-      $Form->AddElement("submit", "formEdit", "Edit");
+      //echo("<td><input type='submit' name='formEdit' value='Edit' /></td>");
+      $Occurs="1";
+      $Form->AddFunctionElement("submit", "formEdit", "Edit");
       $linearraytoedit=$linearray;
     }
     echo("</tr>\n");
   }
   if ($Occurs=="0") {
+  	echo "Add text boxes to form and table";
 		for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
 			$Form->AddElement("text", "ck".$Day, "");
 		}
+		$Table->AddRow($Cookiename, $Form->GetElementArray());
 
 //   	echo ("<tr>
 //          <td>" . $Cookiename ."</td>
@@ -166,9 +184,11 @@
 //          </tr>");
   }
   if ($Editrequest=="1") {
-  		for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
-			$Form->AddElement("text", "ck".$Day, " . $linearraytoedit[$Day] .");
+  	echo "edit request";
+  	for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
+			$Form->AddElement("text", "ck".$Day, $linearraytoedit[$Day]);
 		}
+		$Table->AddRow($Cookiename, $Form->GetElementArray());
 //   	echo ("<tr>
 //          <td>" . $Cookiename ."</td>
 //          <td><input type='text' name='ck1' value = '" . $linearraytoedit[1] ."' /></td>\n
@@ -181,13 +201,18 @@
   }
   $Form->AddElement("submit", "formSubmit", "Submit");
   $Form->AddElement("submit", "formLogout", "Logout");
-  echo $Form->GetForm();
   echo("</table>");
 //   echo("<p><input type='submit' name='formSubmit' value='Submit' /></p>\n
 //         <p><input type='submit' name='formLogout' value='Logout' /></p>\n");
 //    <p> <!--input type='submit' name='formAdvance' value='Advance' / --> </p>
 //  echo("</form>\n</html>\n\n");
 
+  echo "<h2>Table by Class</h2>";
+  echo $Form->StartForm();
+  echo $Table->GetTable();
+  echo $Form->GetForm();
+  echo $Form->GetFunctionElementString();
+	echo $Form->CloseForm();
   echo $HTML->ClosingHtml();
 ?>
 

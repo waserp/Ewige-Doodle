@@ -6,6 +6,7 @@ class FormHandler
 	private $m_ID;
 	private $m_Action = "";
 	private $Elementes = array();
+	private $FunctionElementes = array();
 
 	function FormHandler($Methode, $ID)
 	{
@@ -20,26 +21,42 @@ class FormHandler
 
 	public function GetElementArray()
 	{
-		return $this->Elementes;
+		$tempArray = $this->Elementes;
+		$this->Elementes = array();
+		return $tempArray;
+	}
+
+	function AddFunctionElement($Type, $Name, $Value)
+	{
+		array_push($this->FunctionElementes, new Element($Type, $Name, $Value));
+	}
+
+	function GetFunctionElementString()
+	{
+		$ElementString = "";
+		foreach ($this->FunctionElementes as $El) {
+			$ElementString .= $El->ToString();
+		}
+		return $ElementString;
 	}
 
 	function GetForm()
 	{
-		$Form = $this->GetFormHeaer();
+		$Form = "";
 		for ($i = 0; $i < count($this->Elementes); $i++) {
 			$Form .= $this->Elementes[$i]->ToString();
 		}
-		$Form .= $this->GetFormEnd();
+//		$Form .= $this->GetFormEnd();
 
 		return $Form;
 	}
 
-	public function GetFormHeaer()
+	public function StartForm()
 	{
 		return "<form method='" . $this->m_Methode . "' id='" . $this->m_ID . "' action='" . $this->m_Action . "'>\n";
 	}
 
-	private function GetFormEnd()
+	public function CloseForm()
 	{
 		return "</form>";
 	}

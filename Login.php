@@ -28,7 +28,9 @@
   $LoginForm = new FormHandler("post", "Loginform");
   $LoginForm->AddElement("text", "Name", "");
   $LoginForm->AddElement("submit", "formSubmit", "Submit");
+  echo $LoginForm->StartForm();
   echo $LoginForm->GetForm();
+  echo $LoginForm->CloseForm();
   echo $HTML->ClosingHtml();
 
 
