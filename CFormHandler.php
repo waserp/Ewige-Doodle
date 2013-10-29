@@ -17,6 +17,7 @@ class FormHandler
 	function AddElement($Type, $Name, $Value)
 	{
 		array_push($this->Elementes, new Element($Type, $Name, $Value));
+		return $this->Elementes[sizeof($this->Elementes)-1]->ToString();
 	}
 
 	public function GetElementArray()
@@ -26,6 +27,16 @@ class FormHandler
 		}
 		$this->Elementes = array();
 		return $tempArray;
+	}
+
+	public function GetElementArrayString()
+	{
+		$ElementArray = $this->GetElementArray();
+		$StringOutput = array();
+		foreach ($ElementArray as $Element) {
+			array_push($StringOutput, $Element);
+		}
+		return $StringOutput;
 	}
 
 	function AddFunctionElement($Type, $Name, $Value)
