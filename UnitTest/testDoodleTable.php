@@ -17,7 +17,7 @@ class testDoodleTable extends PHPUnit_Framework_TestCase
   	$ActualArray = $Table->GetCellArray();
   	$this->assertEquals(sizeof($Array), sizeof($ActualArray));
   	for ($i=0; $i < sizeof($Array); $i++) {
-  		$Expected = "    <td style=\" width:180px; background-color:#0000AA\">" . $Array[$i] . "</td>\n";
+  		$Expected = "    <td style=\" width:180px; background-color:#6666FF\">" . $Array[$i] . "</td>\n";
   		$Actual = $ActualArray[$i]->ToString();
   		$this->assertEquals($Expected, $Actual);
   	}
@@ -35,7 +35,7 @@ class testDoodleTable extends PHPUnit_Framework_TestCase
 		$ActualArray = $Table->GetCellArray();
 		$this->assertEquals(sizeof($Array), sizeof($ActualArray));
 		for ($i=0; $i < sizeof($Array); $i++) {
-			$Expected = "    <td style=\" width:180px; background-color:#0000AA\">" . $Array[$i] . "</td>\n";
+			$Expected = "    <td style=\" width:180px; background-color:#6666FF\">" . $Array[$i] . "</td>\n";
 			$Actual = $ActualArray[$i]->ToString();
 			$this->assertEquals($Expected, $Actual);
 		}
@@ -46,7 +46,7 @@ class testDoodleTable extends PHPUnit_Framework_TestCase
   	$ActualArray = $Table->GetCellArray();
 		$this->assertEquals(sizeof($Array), sizeof($ActualArray));
 		for ($i=0; $i < sizeof($Array); $i++) {
-			$Expected = "    <td style=\" width:180px; background-color:#0000AA\">" . $Array[$i] . "</td>\n";
+			$Expected = "    <td style=\" width:180px; background-color:#6666FF\">" . $Array[$i] . "</td>\n";
 			$Actual = $ActualArray[$i]->ToString();
 			$this->assertEquals($Expected, $Actual);
 		}
