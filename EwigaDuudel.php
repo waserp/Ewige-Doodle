@@ -22,19 +22,19 @@
     $data = file("mydata.csv");
     $fs = fopen("mydata.csv","w");
     foreach ($data as $line) {
-      $linearray = explode(",",$line);
+      $LineArray = explode(",",$line);
       //echo($line);
       $flag = "0";
       for ($i = 2; $i <= 6; $i++) {
-        $linearray[$i]= trim($linearray[$i]);
-        if (!empty($linearray[$i])) { $flag = "1"; }
+        $LineArray[$i]= trim($LineArray[$i]);
+        if (!empty($LineArray[$i])) { $flag = "1"; }
       }
       if ($flag == "1") { // only keep entry if there are active dates
         $remaining = $remaining + 1;
-        fwrite($fs,$linearray[0]);
+        fwrite($fs,$LineArray[0]);
         for ($i = 2; $i <= 6; $i++) {
           //echo ($i . " ");
-          fwrite($fs,"," . trim($linearray[$i]));
+          fwrite($fs,"," . trim($LineArray[$i]));
         }
         fwrite($fs,",\n");
       }
@@ -43,20 +43,20 @@
   }// end function advanceADay
 
   function EditLine($NewLine) {
-    $written = "0";
+    $Written = false;
     $data = file("mydata.csv");
     $fs = fopen("mydata.csv","w");
     $NewLineArray= explode(",",$NewLine);
     foreach ($data as $line) {
-      $linearray = explode(",",$line);
-      if ($NewLineArray[0] == $linearray[0]) {
+      $LineArray = explode(",",$line);
+      if ($NewLineArray[0] == $LineArray[0]) {
         fwrite($fs, trim($NewLine) . "\n");
-        $written = "1";
+        $Written = true;
       } else {
         fwrite($fs, trim($line) . "\n");
       }
     }
-    if ($written == "0") {
+    if (!$Written) {
       fwrite($fs, trim($NewLine) . "\n");
     }
     fclose($fs);
@@ -104,13 +104,6 @@
       EditLine($datestring);
   }
 
-  echo $HTML->GetHeader();
-  echo $HTML->GetPageTitle("Ewiger Doodle");
-  echo "<h2>You are logged on as <b>". $Cookiename . "</b></h2>\n";
-
-  echo ("<i>Server Date " . @date(r) . "</i>");
-  echo ("<p>You can stay logged on if you want to.</p>\n");
-
   $Table = new DoodleTable();
 
   $Form = new FormHandler("post", "Klimperform");
@@ -127,28 +120,38 @@
 
   $Occurs="0";
   foreach ($data as $line) {
-    $linearray = explode(",",$line);
-    $FirstRow = true;
-    foreach ($linearray as $element) {
-      $element = trim($element);
-      if (!empty($element)) {
-        $color = "style=\"background-color:#80FF80\"";
-        $Color = CCell::COLOR_YES_I_CAN;
-      } else {
-        $color = "style=\"background-color:#FF8080\"";
-        $Color = CCell::COLOR_NO_I_CANT;
-      }
-				$Table->AddSingleCell($element, $Color);
-    }
-    $Table->AddRow($Table->GetCellArray());
-    if ($linearray[0] == $Cookiename) {
+    $LineArray = explode(",",$line);
+		$PrintLine = true;
+
+    if ($LineArray[0] == $Cookiename) {
       $Occurs="1";
       if ($Editrequest != "1") {
         $Form->AddFunctionElement("submit", "formEdit", "Edit");
       }
-      $linearraytoedit=$linearray;
+      else {
+      	$PrintLine = false;
+        $LineArrayToEdit = $LineArray;
+		    GenerateInputboxForEdit($Table, $Form, $Cookiename, $LineArrayToEdit);
+      }
+    }
+
+    if ($PrintLine) {
+	    foreach ($LineArray as $Element) {
+	      $Element = trim($Element);
+	      if (!empty($Element)) {
+	        $color = "style=\"background-color:#80FF80\"";
+	        $Color = CCell::COLOR_YES_I_CAN;
+	      } else {
+	        $color = "style=\"background-color:#FF8080\"";
+	        $Color = CCell::COLOR_NO_I_CANT;
+	      }
+				$Table->AddSingleCell($Element, $Color);
+	    }
+	    $Table->AddRow($Table->GetCellArray());
     }
   }
+
+  // Generate Input boxes in case Climper was not found in the Database
   if ($Occurs=="0") {
 		$Table->AddSingleCell($Cookiename, CCell::COLOR_YES_I_CAN);
   	for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
@@ -158,16 +161,31 @@
 		$Table->AddRow($Table->GetCellArray());
     $Form->AddFunctionElement("submit", "formSubmit", "Submit");
   }
-  if ($Editrequest=="1") {
+
+
+  function GenerateInputboxForEdit($Table, $Form, $Cookiename, $LineArrayToEdit)
+  {
+	  // Generate Input boxes in case Climper asked to edit his data
 		$Table->AddSingleCell($Cookiename, CCell::COLOR_YES_I_CAN);
   	for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
-			$Form->AddElement("text", "ck".$Day, $linearraytoedit[$Day]);
+			$Form->AddElement("text", "ck".$Day, $LineArrayToEdit[$Day]);
 		}
 		$Table->AddMultipleCell($Form->GetElementArrayString(), CCell::COLOR_CLIMPER);
 		$Table->AddRow($Table->GetCellArray());
     $Form->AddFunctionElement("submit", "formSubmit", "Submit");
   }
+
   $Form->AddFunctionElement("submit", "formLogout", "Logout");
+
+  //////////////////////////////////////////////////////////////////////////////////////////////
+  // Output
+
+  echo $HTML->GetHeader();
+  echo $HTML->GetPageTitle("Ewiger Doodle");
+  echo "<h2>You are logged on as <b>". $Cookiename . "</b></h2>\n";
+
+  echo ("<i>Server Date " . @date(r) . "</i>");
+  echo ("<p>You can stay logged on if you want to.</p>\n");
 
   echo $Form->StartForm();
   echo $Table->GetTable();
