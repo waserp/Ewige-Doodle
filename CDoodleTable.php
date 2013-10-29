@@ -11,6 +11,13 @@ class DoodleTable
     $this->Table = "<table border=\"1\" cellspacing=\"0\" cellpadding=\"2\">\n";
   }
 
+  public function AddMultipleCell($Array, $Color, $Type = RowType::Body)
+  {
+  	foreach ($Array as $SingleCell) {
+  		$this->AddSingleCell($SingleCell, $Color, $Type);
+  	}
+  }
+
   public function AddSingleCell($Text, $Color, $Type = RowType::Body)
   {
   	$Cell = new CCell($Text);
@@ -85,10 +92,10 @@ class RowType
 
 class CCell
 {
-	const COLOR_NO_I_CANT = "FF8080";
-	const COLOR_YES_I_CAN = "80FF80";
-	const COLOR_CLIMPER = "0000AA";
-	const COLOR_HEADER = "E0EFEF";
+	const COLOR_NO_I_CANT = "FF6600"; // FF8080
+	const COLOR_YES_I_CAN = "99CC00"; // 80FF80
+	const COLOR_CLIMPER = "6666FF"; // E0EFEF
+	const COLOR_HEADER = "0099FF"; // E0EFEF
 
 	private $m_Content = "";
 	private $m_Color = "";
