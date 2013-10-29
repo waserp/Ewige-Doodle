@@ -19,7 +19,7 @@ class testFormHandler extends PHPUnit_Framework_TestCase
 	{
 		$T = new FormHandler("post", "myID");
 		$T->AddElement("text", "TestElement", "TestName");
-		$Expected = "<input type='text' name='TestElement' value='TestName'/>\n";
+		$Expected = "<input type=\"text\" name=\"TestElement\" value=\"TestName\"/>\n";
 		$this->assertEquals($Expected, $T->GetForm());
 	}
 
@@ -29,8 +29,8 @@ class testFormHandler extends PHPUnit_Framework_TestCase
 		$T->AddElement("text", "TestElement", "TestName");
 		$T->AddElement("text", "TestElement1", "TestName1");
 
-		$Expected = "<input type='text' name='TestElement' value='TestName'/>\n";
-		$Expected .= "<input type='text' name='TestElement1' value='TestName1'/>\n";
+		$Expected = "<input type=\"text\" name=\"TestElement\" value=\"TestName\"/>\n";
+		$Expected .= "<input type=\"text\" name=\"TestElement1\" value=\"TestName1\"/>\n";
 
 		$this->assertEquals($Expected, $T->GetForm());
 	}
@@ -40,14 +40,14 @@ class testFormHandler extends PHPUnit_Framework_TestCase
 		$T = new FormHandler("post", "myID");
 		$T->AddElement("submit", "OK", "ok");
 
-		$Expected = "<input type='submit' name='OK' value='ok'/>\n";
+		$Expected = "<input type=\"submit\" name=\"OK\" value=\"ok\"/>\n";
 
 		$this->assertEquals($Expected, $T->GetForm());
 	}
 
 	private function ConcatForm($TestPart)
 	{
-		$Expected = "<form method='post' id='myID' action=''>\n";
+		$Expected = "<form method=\"post\" id=\"myID\" action=\"\">\n";
 		$Expected .= $TestPart;
 		$Expected .= "</form>";
 		return $Expected;

@@ -4,24 +4,6 @@ include '../CDoodleTable.php';
 
 class testDoodleTable extends PHPUnit_Framework_TestCase
 {
-  public function testAddHeader()
-  {
-		$Table = new DoodleTable();
-		$Array = array("H1", "H2", "H3");
-		$Table->AddHeader($Array);
-		$Expected = $this->GetStdTable("  <tr>\n    <th style=\"width:200px\">Klimper</th>\n    <th style=\"width:160px\">H1</th>\n    <th style=\"width:160px\">H2</th>\n    <th style=\"width:160px\">H3</th>\n  </tr>\n");
-		$this->assertEquals($Expected, $Table->GetTable());
-  }
-
-  public function testPassObjectArray()
-  {
-  	$ObjArray = array(new ObjectArray("Text1"), new ObjectArray("Text2"));
-  	$Table = new DoodleTable();
-    $Table->AddRow("Klimper1", $ObjArray);
-    $Expect = $this->GetStdTable("  <tr>\n    <td style=\"width:200px\">Klimper1</td>\n    <td style=\"width:160px\">Text1</td>\n    <td style=\"width:160px\">Text2</td>\n  </tr>\n");
-    $this->assertEquals($Expect, $Table->GetTable());
-  }
-
   public function testAddSingleCell()
   {
   	$Table = new DoodleTable();
@@ -29,10 +11,16 @@ class testDoodleTable extends PHPUnit_Framework_TestCase
 
   	$Array = array("H1", "H2", "H3");
   	for ($i=0; $i < sizeof($Array); $i++) {
-  		$Table->AddSingleCell($Array[$i]);
+  		$Table->AddSingleCell($Array[$i], CCell::COLOR_CLIMPER);
   	}
+
   	$ActualArray = $Table->GetCellArray();
-  	$this->assertEquals($Array, $ActualArray);
+  	$this->assertEquals(sizeof($Array), sizeof($ActualArray));
+  	for ($i=0; $i < sizeof($Array); $i++) {
+  		$Expected = "    <td style=\" width:180px; background-color:#0000AA\">" . $Array[$i] . "</td>\n";
+  		$Actual = $ActualArray[$i]->ToString();
+  		$this->assertEquals($Expected, $Actual);
+  	}
   }
 
   public function testGetCellArrayReset()
@@ -42,16 +30,26 @@ class testDoodleTable extends PHPUnit_Framework_TestCase
 
   	$Array = array("H1", "H2", "H3");
   	for ($i=0; $i < sizeof($Array); $i++) {
-  		$Table->AddSingleCell($Array[$i]);
+  		$Table->AddSingleCell($Array[$i], CCell::COLOR_CLIMPER);
   	}
-  	$ActualArray = $Table->GetCellArray();
-		$this->assertEquals($Array, $ActualArray);
+		$ActualArray = $Table->GetCellArray();
+		$this->assertEquals(sizeof($Array), sizeof($ActualArray));
+		for ($i=0; $i < sizeof($Array); $i++) {
+			$Expected = "    <td style=\" width:180px; background-color:#0000AA\">" . $Array[$i] . "</td>\n";
+			$Actual = $ActualArray[$i]->ToString();
+			$this->assertEquals($Expected, $Actual);
+		}
 		// test the second time, reset function must have emptyed the array
   	for ($i=0; $i < sizeof($Array); $i++) {
-  		$Table->AddSingleCell($Array[$i]);
+  		$Table->AddSingleCell($Array[$i], CCell::COLOR_CLIMPER);
   	}
   	$ActualArray = $Table->GetCellArray();
-		$this->assertEquals($Array, $ActualArray);
+		$this->assertEquals(sizeof($Array), sizeof($ActualArray));
+		for ($i=0; $i < sizeof($Array); $i++) {
+			$Expected = "    <td style=\" width:180px; background-color:#0000AA\">" . $Array[$i] . "</td>\n";
+			$Actual = $ActualArray[$i]->ToString();
+			$this->assertEquals($Expected, $Actual);
+		}
   }
 
   private function GetStdTable($Body)

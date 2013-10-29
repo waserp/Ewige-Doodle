@@ -21,7 +21,9 @@ class FormHandler
 
 	public function GetElementArray()
 	{
-		$tempArray = $this->Elementes;
+		for ($i = 0; $i < sizeof($this->Elementes); $i++) {
+			$tempArray[$i] = $this->Elementes[$i]->ToString();
+		}
 		$this->Elementes = array();
 		return $tempArray;
 	}
@@ -46,14 +48,13 @@ class FormHandler
 		for ($i = 0; $i < count($this->Elementes); $i++) {
 			$Form .= $this->Elementes[$i]->ToString();
 		}
-//		$Form .= $this->GetFormEnd();
 
 		return $Form;
 	}
 
 	public function StartForm()
 	{
-		return "<form method='" . $this->m_Methode . "' id='" . $this->m_ID . "' action='" . $this->m_Action . "'>\n";
+		return "<form method=\"" . $this->m_Methode . "\" id=\"" . $this->m_ID . "\" action=\"" . $this->m_Action . "\">\n";
 	}
 
 	public function CloseForm()
@@ -80,7 +81,7 @@ class Element
 		if (!$this->ValidateType($this->m_Type)) {
 			return "";
 		}
-		return "<input type='" . $this->m_Type . "' name='" . $this->m_Name . "' value='" . $this->m_Value . "'/>\n";
+		return "<input type=\"" . $this->m_Type . "\" name=\"" . $this->m_Name . "\" value=\"" . $this->m_Value . "\"/>\n";
 	}
 
 	private function ValidateType($Type)

@@ -126,12 +126,14 @@
   echo ("<table border=\"1\" cellspacing=\"0\" cellpadding=\"2\">\n");
   echo ('<colgroup><col width="200"><col width="180"><col width="180"><col width="180"><col width="180"><col width="180"><col width="180"></colgroup>');
   echo ("<tr style=\"background-color:#E0EFEF\"><td>Klimper</td>");
-  $Table->AddSingleCell("Klimper");
+
+  // Generate Header with the days
+  $Table->AddSingleCell("Klimper", CCell::COLOR_HEADER);
   for ($i = $weekday; $i <= ($weekday + 5); $i++) {
     echo ("<td>" . $weekdays[$i] . "</td>");
-		$Table->AddSingleCell($weekdays[$i]);
+		$Table->AddSingleCell($weekdays[$i], CCell::COLOR_HEADER);
   }
-  $Table->AddHeader($Table->GetCellArray());
+  $Table->AddRow($Table->GetCellArray(), RowType::Header);
 
   echo("</tr>\n");
 
@@ -146,15 +148,17 @@
       $element = trim($element);
       if (!empty($element)) {
         $color = "style=\"background-color:#80FF80\"";
+        $Color = CCell::COLOR_YES_I_CAN;
       } else {
         $color = "style=\"background-color:#FF8080\"";
+        $Color = CCell::COLOR_NO_I_CANT;
       }
       echo ("<td ". $color . ">". $element ."</td>");
 // 			if ($FirstRow) {
 // 				$Klimper = $element;
 // 				$FirstRow = false;
 // 			} else {
-				$Table->AddSingleCell($element);
+				$Table->AddSingleCell($element, $Color);
 //			}
     }
     $Table->AddRow($Table->GetCellArray());
@@ -167,12 +171,11 @@
     echo("</tr>\n");
   }
   if ($Occurs=="0") {
-  	echo "Add text boxes to form and table";
 		for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
 			$Form->AddElement("text", "ck".$Day, "");
 		}
-		$Table->AddRow($Cookiename, $Form->GetElementArray());
-
+		$Table->AddSingleCell($Cookiename, CCell::COLOR_YES_I_CAN);
+		$Table->AddRow($Form->GetElementArray());
 //   	echo ("<tr>
 //          <td>" . $Cookiename ."</td>
 //          <td><input type='text' name='ck1' /></td>\n
@@ -188,7 +191,8 @@
   	for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
 			$Form->AddElement("text", "ck".$Day, $linearraytoedit[$Day]);
 		}
-		$Table->AddRow($Cookiename, $Form->GetElementArray());
+		$Table->AddSingleCell($Cookiename, CCell::COLOR_YES_I_CAN);
+		$Table->AddRow($Form->GetElementArray());
 //   	echo ("<tr>
 //          <td>" . $Cookiename ."</td>
 //          <td><input type='text' name='ck1' value = '" . $linearraytoedit[1] ."' /></td>\n
@@ -206,13 +210,14 @@
 //         <p><input type='submit' name='formLogout' value='Logout' /></p>\n");
 //    <p> <!--input type='submit' name='formAdvance' value='Advance' / --> </p>
 //  echo("</form>\n</html>\n\n");
-
-  echo "<h2>Table by Class</h2>";
+	echo "\n\n";
+  echo "<h2>Table by Class</h2>\n";
   echo $Form->StartForm();
   echo $Table->GetTable();
   echo $Form->GetForm();
   echo $Form->GetFunctionElementString();
 	echo $Form->CloseForm();
   echo $HTML->ClosingHtml();
+
 ?>
 

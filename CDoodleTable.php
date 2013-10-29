@@ -11,11 +11,12 @@ class DoodleTable
     $this->Table = "<table border=\"1\" cellspacing=\"0\" cellpadding=\"2\">\n";
   }
 
-  public function AddSingleCell($Text)
+  public function AddSingleCell($Text, $Color, $Type = RowType::Body)
   {
   	$Cell = new CCell($Text);
-  	$Cell->SetSize(160);
-  	$Cell->SetColor(CCell::COLOR_BLUE);
+  	$Cell->SetSize(180);
+  	$Cell->SetColor($Color);
+  	$Cell->SetType($Type);
   	array_push($this->m_CellArray, $Cell);
   }
 
@@ -26,30 +27,38 @@ class DoodleTable
   	return $tempArray;
   }
 
-  public function AddHeader($Array)
+  public function AddRow($Array, $Type = RowType::Body)
   {
-  	$this->Table .= "  <tr>\n" . $this->GenerateRow($Array, RowType::Header) . "  </tr>\n";
+  	if (sizeof($Array) == 0) {
+  		echo "ERROR: AddRow needs a array with at least one element.";
+  		return 0;
+  	}
+  	if (gettype($Array[0]) == "string") {
+  		foreach ($Array as $CellContent) {
+  			$this->AddSingleCell($CellContent, CCell::COLOR_HEADER, $Type);
+  		}
+  		$Array = $this->GetCellArray();
+  	}
+  	else if (gettype($Array[0]) == "object") {
+  		if (get_class($Array[0]) != "CCell") {
+  			echo "ERROR: Object must be of type CCell";
+  		}
+  	}
+
+    $this->Table .= "  <tr>\n" . $this->GenerateRow($Array) . "  </tr>\n";
   	$this->m_TableReadyToUse = true;
   }
 
-  public function AddRow($Array)
+  private function GenerateRow($Array)
   {
-    $this->Table .= "  <tr>\n" . $this->GenerateRow($Array, RowType::Body) . "  </tr>\n";
-  	$this->m_TableReadyToUse = true;
-  }
-
-  private function GenerateRow(	$Array, $RowType)
-  {
-    $Type = $this->GetTypeString($RowType);
   	$Output = "";
   	for ($i = 0; $i < sizeof($Array); $i++) {
   	  if (method_exists($Array[$i], "ToString")) {
-        $Output .= $Array[$i]->ToString();
+        $Text = $Array[$i]->ToString();
   	  } else {
   	  	$Text = $Array[$i];
-  	  	$Output .= "    <$Type style=\"width:160px\">" . $Text . "</$Type>\n";
   	  }
-
+  	  $Output .= "    $Text";
     }
     return $Output;
   }
@@ -63,19 +72,7 @@ class DoodleTable
     return $this->Table;
   }
 
-  private function GetTypeString($RowType)
-  {
-    switch ($RowType) {
-      case RowType::TH:
-      case RowType::Header:
-        return "th";
-      case RowType::TD:
-      case RowType::Body:
-        return "td";
-      default:
-        return "";
-    }
-  }
+
 }
 
 class RowType
@@ -88,17 +85,20 @@ class RowType
 
 class CCell
 {
-	const COLOR_RED = "FF0000";
-	const COLOR_GREEN = "00FF00";
-	const COLOR_BLUE = "0000FF";
+	const COLOR_NO_I_CANT = "FF8080";
+	const COLOR_YES_I_CAN = "80FF80";
+	const COLOR_CLIMPER = "0000AA";
+	const COLOR_HEADER = "E0EFEF";
 
 	private $m_Content = "";
 	private $m_Color = "";
 	private $m_Size = "";
+	private $m_Type;
 
 	public function CCell($Content)
 	{
 		$this->m_Content = $Content;
+		$this->m_Type = RowType::Body;
 	}
 
 	public function SetContent($Content)
@@ -115,17 +115,41 @@ class CCell
 		$this->m_Size = $Size;
 	}
 
+	public function SetType($Type)
+	{
+		if ($this->GetTypeString($Type) != "") {
+		  $this->m_Type = $Type;
+		} else {
+			echo "ERROR: Cell type not allowed! ($Type)";
+		}
+	}
+
 	public function ToString()
 	{
-		$CellString = "    <td style=\"";
+		$Type = $this->GetTypeString($this->m_Type);
+		$CellString = "    <" . $Type . " style=\"";
 		if (!empty($this->m_Size)) {
 			$CellString .= " width:" . $this->m_Size . "px;";
 		}
 		if (!empty($this->m_Color)) {
 			$CellString .= " background-color:#" . $this->m_Color . "";
 		}
-		$CellString .= "\">" . $this->m_Content . "</td>\n";
+		$CellString .= "\">" . $this->m_Content . "</" . $Type . ">\n";
 		return $CellString;
+	}
+
+	private function GetTypeString($RowType)
+	{
+		switch ($RowType) {
+			case RowType::TH:
+			case RowType::Header:
+				return "th";
+			case RowType::TD:
+			case RowType::Body:
+				return "td";
+			default:
+				return "";
+		}
 	}
 }
 
