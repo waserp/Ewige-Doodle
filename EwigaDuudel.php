@@ -70,6 +70,7 @@
    $val = substr($val, 0, 30);
    return $val;
   }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   if (@$_POST['formAdvance'] == "Advance") {
     AdvanceADay();
@@ -91,9 +92,9 @@
   if (empty($Cookiename)) {
     header("Location: Login.php");
   }
-  $Editrequest="0";
+  $Editrequest = false;
   if (@$_POST['formEdit'] == "Edit") {
-    $Editrequest="1";
+    $Editrequest = true;
   }
 
   $Cookiename = ucfirst(strtolower($Cookiename));
@@ -118,19 +119,20 @@
   }
   $Table->AddRow($Table->GetCellArray(), RowType::Header);
 
-  $Occurs="0";
+  $ClimperAlreadyInDatabases = false;
   foreach ($data as $line) {
     $LineArray = explode(",",$line);
 		$PrintLine = true;
 
     if ($LineArray[0] == $Cookiename) {
-      $Occurs="1";
-      if ($Editrequest != "1") {
+      $ClimperAlreadyInDatabases = true;
+      if (!$Editrequest) {
         $Form->AddFunctionElement("submit", "formEdit", "Edit");
       }
       else {
       	$PrintLine = false;
         $LineArrayToEdit = $LineArray;
+        // Generate Input boxes in case Climper asked to edit his data
 		    GenerateInputboxForEdit($Table, $Form, $Cookiename, $LineArrayToEdit);
       }
     }
@@ -151,24 +153,21 @@
     }
   }
 
-  // Generate Input boxes in case Climper was not found in the Database
-  if ($Occurs=="0") {
-		$Table->AddSingleCell($Cookiename, CCell::COLOR_YES_I_CAN);
-  	for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
-			$Form->AddElement("text", "ck".$Day, "");
-		}
-		$Table->AddMultipleCell($Form->GetElementArrayString(), CCell::COLOR_CLIMPER);
-		$Table->AddRow($Table->GetCellArray());
-    $Form->AddFunctionElement("submit", "formSubmit", "Submit");
+  if (!$ClimperAlreadyInDatabases) {
+    // Generate Input boxes in case Climper was not found in the Database
+  	GenerateInputboxForEdit($Table, $Form, $Cookiename, "");
   }
 
 
   function GenerateInputboxForEdit($Table, $Form, $Cookiename, $LineArrayToEdit)
   {
-	  // Generate Input boxes in case Climper asked to edit his data
-		$Table->AddSingleCell($Cookiename, CCell::COLOR_YES_I_CAN);
+		$Value = "";
+  	$Table->AddSingleCell($Cookiename, CCell::COLOR_YES_I_CAN);
   	for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
-			$Form->AddElement("text", "ck".$Day, $LineArrayToEdit[$Day]);
+			if ($LineArrayToEdit != "") {
+				$Value = $LineArrayToEdit[$Day];
+			}
+  		$Form->AddElement("text", "ck".$Day, $Value);
 		}
 		$Table->AddMultipleCell($Form->GetElementArrayString(), CCell::COLOR_CLIMPER);
 		$Table->AddRow($Table->GetCellArray());
@@ -192,7 +191,9 @@
   echo $Table->GetTable();
   echo $Form->GetForm();
   echo $Form->GetFunctionElementString();
-  echo "<a href=\"\">refresh</a>";
+  $Refreshtext = "refresh";
+  if ($Editrequest) { $Refreshtext = "cancle"; }
+  echo "<a href=\"\">" . $Refreshtext . "</a>";
 	echo $Form->CloseForm();
   echo $HTML->ClosingHtml();
 
