@@ -180,8 +180,9 @@
   //////////////////////////////////////////////////////////////////////////////////////////////
   // Output
 
-  echo $HTML->GetHeader();
-  echo $HTML->GetPageTitle("Ewiger Doodle");
+  $PageTitle = "Ewiger Doodle";
+  echo $HTML->GetHeader($PageTitle);
+  echo $HTML->GetPageTitle($PageTitle);
   echo "<h2>You are logged on as <b>". $Cookiename . "</b></h2>\n";
 
   echo ("<i>Server Date " . @date(r) . "</i>");
@@ -191,6 +192,7 @@
   echo $Table->GetTable();
   echo $Form->GetForm();
   echo $Form->GetFunctionElementString();
+  echo "<a href=\"\">refresh</a>";
 	echo $Form->CloseForm();
   echo $HTML->ClosingHtml();
 

@@ -23,7 +23,7 @@
   }
 
   $PageTitle = "LOGIN: Ewiger Doodle";
-  echo $HTML->GetHeader();
+  echo $HTML->GetHeader($PageTitle);
   echo $HTML->GetPageTitle($PageTitle);
   $LoginForm = new FormHandler("post", "Loginform");
   $LoginForm->AddElement("text", "Name", "");

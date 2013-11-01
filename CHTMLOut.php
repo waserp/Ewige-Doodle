@@ -4,10 +4,10 @@
 class HTMLOut
 {
 
-  public function GetHeader()
+  public function GetHeader($Title)
   {
     $Header = "<html xmlns='http://www.w3.org/1999/xhtml'>\n<head>\n<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
-          <title>Login for Ewiger Doodle</title>\n<LINK REL=\"StyleSheet\" HREF=\"style.css\" TYPE=\"text/css\">\n</head>\n<body>";
+          <title>" . $Title . "</title>\n<LINK REL=\"StyleSheet\" HREF=\"style.css\" TYPE=\"text/css\">\n</head>\n<body>";
 
     return $Header;
   }
@@ -26,8 +26,6 @@ class HTMLOut
     <p><input type='submit' name='formSubmit' value='Submit' /> </p></form>";
     return $LoginForm;
   }
-
-
 
   public function ClosingHtml()
   {
