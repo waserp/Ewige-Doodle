@@ -6,16 +6,26 @@ class Cookie
 
   public function Cookie()
   {
-    $this->Cookiename = $_COOKIE["KlimperName"];
+    $Cookiename = $_COOKIE["KlimperName"];
     $this->Cookiename = @trim($Cookiename);
   }
 
   public function CheckCookieExists()
   {
-    if (!empty($this->Cookiename)) {
+    if (empty($this->Cookiename)) {
       return false;
     }
     return true;
+  }
+
+  function GetClimperName()
+  {
+  	if ($this->CheckCookieExists()) {
+  		return $this->Cookiename;
+  	}
+  	else {
+  		return "";
+  	}
   }
 
   public function SetCookie($CookieValue)

@@ -10,8 +10,8 @@
   $HTML = new HTMLOut();
   $Cookie = new Cookie();
 
-  if (!$Cookie->CheckCookieExists()) {
-    header("Location: Login.php");
+  if ($Cookie->CheckCookieExists()) {
+    header("Location: EwigaDuudel.php");
   }
 
   if($_POST['formSubmit'] == "Submit") {

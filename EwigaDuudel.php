@@ -88,8 +88,7 @@
     setcookie ("KlimperName", "", time() - 3600);  // Clear Cookie
     header("Location: Login.php");
   }
-  $Cookiename = $_COOKIE["KlimperName"];
-  if (empty($Cookiename)) {
+  if (!$Cookie->CheckCookieExists()) {
     header("Location: Login.php");
   }
   $Editrequest = false;
@@ -97,10 +96,8 @@
     $Editrequest = true;
   }
 
-  $Cookiename = ucfirst(strtolower($Cookiename));
-
   if(@$_POST['formSubmit'] == "Submit") {
-      $datestring = $Cookiename . CleanEntry($_POST['ck1']) . CleanEntry($_POST['ck2']) . CleanEntry($_POST['ck3']) .
+      $datestring = $Cookie->GetClimperName() . CleanEntry($_POST['ck1']) . CleanEntry($_POST['ck2']) . CleanEntry($_POST['ck3']) .
                     CleanEntry($_POST['ck4']) . CleanEntry($_POST['ck5']) . CleanEntry($_POST['ck6']);
       EditLine($datestring);
   }
@@ -124,7 +121,7 @@
     $LineArray = explode(",",$line);
 		$PrintLine = true;
 
-    if ($LineArray[0] == $Cookiename) {
+    if ($LineArray[0] == $Cookie->GetClimperName()) {
       $ClimperAlreadyInDatabases = true;
       if (!$Editrequest) {
         $Form->AddFunctionElement("submit", "formEdit", "Edit");
@@ -133,7 +130,7 @@
       	$PrintLine = false;
         $LineArrayToEdit = $LineArray;
         // Generate Input boxes in case Climper asked to edit his data
-		    GenerateInputboxForEdit($Table, $Form, $Cookiename, $LineArrayToEdit);
+		    GenerateInputboxForEdit($Table, $Form, $Cookie->GetClimperName(), $LineArrayToEdit);
       }
     }
 
@@ -155,7 +152,7 @@
 
   if (!$ClimperAlreadyInDatabases) {
     // Generate Input boxes in case Climper was not found in the Database
-  	GenerateInputboxForEdit($Table, $Form, $Cookiename, "");
+  	GenerateInputboxForEdit($Table, $Form, $Cookie->GetClimperName(), "");
   }
 
 
@@ -182,7 +179,7 @@
   $PageTitle = "Ewiger Doodle";
   echo $HTML->GetHeader($PageTitle);
   echo $HTML->GetPageTitle($PageTitle);
-  echo "<h2>You are logged on as <b>". $Cookiename . "</b></h2>\n";
+  echo "<h2>You are logged on as <b>". $Cookie->GetClimperName() . "</b></h2>\n";
 
   echo ("<i>Server Date " . @date(r) . "</i>");
   echo ("<p>You can stay logged on if you want to.</p>\n");
