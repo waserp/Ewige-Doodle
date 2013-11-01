@@ -14,10 +14,14 @@ class FormHandler
 		$this->m_ID = $ID;
 	}
 
-	function AddElement($Type, $Name, $Value)
+	function AddElement($Type, $Name, $Value, $ShownFieldName = "")
 	{
-		array_push($this->Elementes, new Element($Type, $Name, $Value));
-		return $this->Elementes[sizeof($this->Elementes)-1]->ToString();
+		$NewElement = new Element($Type, $Name, $Value);
+		if (!empty($ShownFieldName)) {
+			$NewElement->SetShownFieldName($ShownFieldName);
+		}
+		array_push($this->Elementes, $NewElement);
+		return $NewElement->ToString();
 	}
 
 	public function GetElementArray()
@@ -79,6 +83,7 @@ class Element
 	private $m_Type;
 	private $m_Name;
 	private $m_Value = "";
+	private $m_ShownFieldName = "";
 
 	function Element($Type, $Name, $Value)
 	{
@@ -87,12 +92,22 @@ class Element
 		$this->m_Value = $Value;
 	}
 
+	public function SetShownFieldName($FieldName)
+	{
+		$this->m_ShownFieldName = $FieldName;
+	}
+
 	public function ToString()
 	{
+		$OutputText = "";
 		if (!$this->ValidateType($this->m_Type)) {
 			return "";
 		}
-		return "<input type=\"" . $this->m_Type . "\" name=\"" . $this->m_Name . "\" value=\"" . $this->m_Value . "\"/>\n";
+		$OutputText = "<input type=\"" . $this->m_Type . "\" name=\"" . $this->m_Name . "\" value=\"" . $this->m_Value . "\"/>\n";
+		if (!empty($this->m_ShownFieldName)) {
+			$OutputText = $this->m_ShownFieldName . ": " . $OutputText . "<br>";
+		}
+		return $OutputText;
 	}
 
 	private function ValidateType($Type)
