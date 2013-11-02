@@ -15,9 +15,14 @@
   }
 
   if($_POST['formSubmit'] == "Submit") {
-    if(!empty($_POST['Name'])) {
+    if (!empty($_POST['Name'])) {
       $Klimper = $_POST['Name'];
       $Cookie->SetCookie($Klimper);
+      if (!empty($_POST['Email'])) {
+        if ($_POST['Email'] == $_POST['EmailConfirm']) {
+
+        }
+      }
       header("Location: EwigaDuudel.php");
     }
   }
@@ -26,7 +31,9 @@
   echo $HTML->GetHeader($PageTitle);
   echo $HTML->GetPageTitle($PageTitle);
   $LoginForm = new FormHandler("post", "Loginform");
-  $LoginForm->AddElement("text", "Name", "");
+  $LoginForm->AddElement("text", "Name", "", "*Name");
+  $LoginForm->AddElement("text", "Email", "", "Email");
+  $LoginForm->AddElement("text", "EmailConfirm", "", "Email confirmation");
   $LoginForm->AddElement("submit", "formSubmit", "Submit");
   echo $LoginForm->StartForm();
   echo $LoginForm->GetForm();
