@@ -14,7 +14,7 @@ class FormHandler
 		$this->m_ID = $ID;
 	}
 
-	function AddElement($Type, $Name, $Value, $ShownFieldName = "")
+	public function AddElement($Type, $Name, $Value, $ShownFieldName = "")
 	{
 		$NewElement = new Element($Type, $Name, $Value);
 		if (!empty($ShownFieldName)) {

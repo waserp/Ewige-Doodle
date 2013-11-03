@@ -17,7 +17,6 @@
 
   function AdvanceADay() {
     $remaining = 0;
-    $dat = date("U");
     //echo ("Datum : " . date("W") . " " .  $dat . "\n");
     $data = file("mydata.csv");
     $fs = fopen("mydata.csv","w");

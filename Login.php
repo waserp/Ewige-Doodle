@@ -6,6 +6,7 @@
   include 'CHTMLOut.php';
   include 'CFormHandler.php';
   include 'CCookie.php';
+  include 'CDataHandler.php';
 
   $HTML = new HTMLOut();
   $Cookie = new Cookie();
@@ -20,8 +21,15 @@
       $Cookie->SetCookie($Klimper);
       if (!empty($_POST['Email'])) {
         if ($_POST['Email'] == $_POST['EmailConfirm']) {
-
+        	$Email = $_POST['Email'];
         }
+        else {
+          $Email = "";
+        }
+      }
+      $DataHandler = new CDataHandler();
+      if (!$DataHandler->IsKlimperInDatabase($Klimper)) {
+        //$DataHandler->AddNewEmptyKlimperDataset($Klimper);
       }
       header("Location: EwigaDuudel.php");
     }
