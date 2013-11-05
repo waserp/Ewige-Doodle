@@ -49,6 +49,10 @@ class testDataHandler extends PHPUnit_Framework_TestCase
   	unset($DataHandler);
    	$DataHandler = new CDataHandler();
   	$this->assertTrue($DataHandler->IsKlimperInDatabase("Kurt"));
+  	$ExpectedString = "Kurt,,,,,,,";
+  	$ActualString = $DataHandler->GetKlimperString("Kurt");
+  	echo "Actual String: " . $ActualString . "\n";
+  	$this->assertEquals($ExpectedString, $ActualString);
   }
 
   public function testIncrementDay()
