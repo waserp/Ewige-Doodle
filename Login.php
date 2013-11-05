@@ -29,7 +29,7 @@
       }
       $DataHandler = new CDataHandler();
       if (!$DataHandler->IsKlimperInDatabase($Klimper)) {
-        //$DataHandler->AddNewEmptyKlimperDataset($Klimper);
+        $DataHandler->AddNewEmptyKlimperDataset($Klimper);
       }
       header("Location: EwigaDuudel.php");
     }
