@@ -2,15 +2,14 @@
 
 define("FILE_LAST_ACCESS", "lastaccess.csv");
 define("FILE_DOODLE_DATA", "mydata.csv");
-define("CLIMPER_DATA_ELEMENT_NAME", 0);
-define("CLIMPER_DATA_ELEMENT_EMAIL", 1);
-define("CLIMPER_DATA_ELEMENT_LAST", CLIMPER_DATA_ELEMENT_NAME);
+define("KLIMPER_DATA_ELEMENT_NAME", 0);
+define("KLIMPER_DATA_ELEMENT_EMAIL", 1);
+define("KLIMPER_DATA_ELEMENT_LAST", KLIMPER_DATA_ELEMENT_NAME);
 define("AMOUNT_OF_DAYS", "7");
 
 class CDataHandler
 {
-  private $Data = array(); // Array of climper data
-  private $KlimperData = array(); // old LineArray, Containing all data for a particular climper
+  private $Data = array(); // Array of klimper data
   private $fs;
 
 
@@ -34,19 +33,19 @@ class CDataHandler
 	{
 		foreach ($this->Data as $Key => &$LineArray) {
 			$AtLeastOneEntryFound = false;
-			for ($i = (CLIMPER_DATA_ELEMENT_LAST + 2); $i < count($LineArray); $i++) {
+			for ($i = (KLIMPER_DATA_ELEMENT_LAST + 2); $i < count($LineArray); $i++) {
 				$LineArray[$i] = trim($LineArray[$i]);
 				if (!empty($LineArray[$i])) {
 					$AtLeastOneEntryFound = true;
 				}
 			}
 			if ($AtLeastOneEntryFound) { // only keep entry if there are active dates
-        $NewClimperArray = array();
-				$NewClimperArray[CLIMPER_DATA_ELEMENT_NAME] = $LineArray[CLIMPER_DATA_ELEMENT_NAME];
-				for ($i = (CLIMPER_DATA_ELEMENT_LAST + 2); $i < count($LineArray); $i++) {
-					$NewClimperArray[CLIMPER_DATA_ELEMENT_LAST + $i - 1] = $LineArray[$i];
+        $NewKlimperArray = array();
+				$NewKlimperArray[KLIMPER_DATA_ELEMENT_NAME] = $LineArray[KLIMPER_DATA_ELEMENT_NAME];
+				for ($i = (KLIMPER_DATA_ELEMENT_LAST + 2); $i < count($LineArray); $i++) {
+					$NewKlimperArray[KLIMPER_DATA_ELEMENT_LAST + $i - 1] = $LineArray[$i];
 				}
-        $LineArray = $NewClimperArray;
+        $LineArray = $NewKlimperArray;
 			}
       else {
         unset($this->Data[$Key]);
@@ -56,9 +55,8 @@ class CDataHandler
 
 	public function IsKlimperInDatabase($KlimperNameToVerify)
   {
-		foreach ($this->Data as $ActualKlimperData)
-		{
-      $ActualKlimperName = $ActualKlimperData[0];
+		foreach ($this->Data as $ActualKlimperData) {
+      $ActualKlimperName = $ActualKlimperData[KLIMPER_DATA_ELEMENT_NAME];
 			if ($ActualKlimperName == $KlimperNameToVerify) {
 				return true;
 			}
@@ -68,7 +66,35 @@ class CDataHandler
 
 	public function AddNewEmptyKlimperDataset($NewKlimperName)
 	{
-		$this->EditLine($NewKlimperName . ",\n");
+    // add empty day string
+		$EmptyDayString = "";
+		for ($i = 0; $i<AMOUNT_OF_DAYS; $i++) {
+      $EmptyDayString .= ",";
+    }
+		$this->EditLine($NewKlimperName . $EmptyDayString . "\n");
+	}
+
+	// function introduced for testing purpose
+	public function GetKlimperString($Klimper)
+	{
+		foreach ($this->Data as $ActualKlimperData) {
+			$ActualKlimperName = $ActualKlimperData[KLIMPER_DATA_ELEMENT_NAME];
+			if ($ActualKlimperName == $Klimper) {
+				return $this->ConvertKlimperArrayToString($ActualKlimperData);
+			}
+		}
+		return "";
+	}
+
+	private function ConvertKlimperArrayToString($DataSet)
+	{
+		$OutpurtString = "";
+		for ($i=0; $i < (count($DataSet) - 1); $i++) { // explaining the -1: do not fill last element which contains the delimiter '\n'
+			$DataElement = $DataSet[$i];
+			$DataElement .= ",";
+			$OutpurtString .= $DataElement;
+		}
+		return $OutpurtString;
 	}
 
 	function GetLastAccess()
@@ -77,8 +103,6 @@ class CDataHandler
 		$LastAccess = trim($LastAccess{0});
 		return $LastAccess;
 	}
-
-
 
 	private function CleanEntry($Entry) {
 		$val = trim($Entry);
@@ -93,12 +117,12 @@ class CDataHandler
     $Written = false;
 		$KlimperToEditArray = $this->KlimperDataStringToArray($KlimperToEdit);
 		foreach ($this->Data as &$ActualKlimperArray) {
-			if ($KlimperToEditArray[0] == $ActualKlimperArray[0]) {
+			if ($KlimperToEditArray[KLIMPER_DATA_ELEMENT_NAME] == $ActualKlimperArray[KLIMPER_DATA_ELEMENT_NAME]) {
 				$ActualKlimperArray = $KlimperToEditArray;
 				$Written = true;
 			}
 		}
-		// Write new climper
+		// Write new klimper
 		if (!$Written) {
       array_push($this->Data, $KlimperToEditArray);
 		}
@@ -112,15 +136,15 @@ class CDataHandler
 
 	private function ReadDataFromFile()
   {
-      $DataStringArray = file(FILE_DOODLE_DATA);
+    $DataStringArray = file(FILE_DOODLE_DATA);
 		$this->fs = fopen(FILE_DOODLE_DATA, "w");
     if ($this->fs == NULL) {
       echo "ERROR, Filepointer is NULL after construction\n";
     }
     else {
 	    $i = 0;
-	    foreach ($DataStringArray as $ClimperData) {
-	      $KlimperArray = explode(",", $ClimperData);
+	    foreach ($DataStringArray as $KlimperDataString) {
+	      $KlimperArray = explode(",", $KlimperDataString);
 	      $this->Data[$i] = $KlimperArray;
 	      $i++;
       }
