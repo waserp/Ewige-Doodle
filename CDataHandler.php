@@ -2,6 +2,7 @@
 
 define("FILE_LAST_ACCESS", "lastaccess.csv");
 define("FILE_DOODLE_DATA", "mydata.csv");
+define("FILE_LOCK", "lock");
 define("KLIMPER_DATA_ELEMENT_NAME", 0);
 define("KLIMPER_DATA_ELEMENT_EMAIL", 1);
 define("KLIMPER_DATA_ELEMENT_LAST", KLIMPER_DATA_ELEMENT_NAME);
@@ -11,25 +12,54 @@ class CDataHandler
 {
   private $Data = array(); // Array of klimper data
   private $fs;
+  private $Log;
+  private $InstanceName = "";
+  private $DataReadResult;
 
-
-	public function __construct()
+	public function __construct($InstanceName)
 	{
-    $this->ReadDataFromFile();
+		$this->Log = fopen("logfile.log", "a+");
+		$this->InstanceName = $InstanceName;
+		$this->Trace("Open DataHandler");
+		$this->DataReadResult = $this->LoadData();
 	}
 
 	public function __destruct()
 	{
     if ($this->fs == NULL) {
-    	echo "ERROR, Filepointer is NULL before destruction\n";
+      $this->Trace("ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.");
     }
     else {
       $this->WriteDataToFile();
+      $this->funlock();
       fclose($this->fs);
     }
+		$this->Trace("Close DataHandler");
 	}
 
-	function IncrementDay()
+	// for testing purpose this function must be public
+  public function LoadData()
+  {
+  	if (!$this->ReadDataFromFile()) {
+  		$this->Trace("File could not be read!");
+  		return false;
+  	}
+  	$this->Trace("File Read successfully");
+  	return true;
+  }
+
+  public function GetDataReadResult()
+  {
+		return $this->DataReadResult;
+  }
+
+  public function GetAmountOfDays()
+  {
+  	return AMOUNT_OF_DAYS;
+  }
+
+  // public for testing purpose
+	public function IncrementDay()
 	{
 		foreach ($this->Data as $Key => &$LineArray) {
 			$AtLeastOneEntryFound = false;
@@ -97,11 +127,24 @@ class CDataHandler
 		return $OutpurtString;
 	}
 
-	function GetLastAccess()
+	private function GetLastAccess()
 	{
 		$LastAccess = file(FILE_LAST_ACCESS);
 		$LastAccess = trim($LastAccess{0});
 		return $LastAccess;
+	}
+
+	public function SetLastAccessAndIncrement()
+	{
+		$TodaysDay = @date(z);
+		$LastAccess = $this->GetLastAccess();
+		while($LastAccess != $TodaysDay) {
+			$this->IncrementDay();
+			$LastAccess++;
+		}
+		$fs = fopen(FILE_LAST_ACCESS, "w");
+		fwrite($fs,$TodaysDay);
+		fclose($fs);
 	}
 
 	private function CleanEntry($Entry) {
@@ -137,11 +180,12 @@ class CDataHandler
 	private function ReadDataFromFile()
   {
     $DataStringArray = file(FILE_DOODLE_DATA);
-		$this->fs = fopen(FILE_DOODLE_DATA, "w");
+		$this->fs = fopen(FILE_DOODLE_DATA, "r+");
     if ($this->fs == NULL) {
       echo "ERROR, Filepointer is NULL after construction\n";
+      return false;
     }
-    else {
+    if ($this->GetLock($this->fs)) {
 	    $i = 0;
 	    foreach ($DataStringArray as $KlimperDataString) {
 	      $KlimperArray = explode(",", $KlimperDataString);
@@ -149,6 +193,70 @@ class CDataHandler
 	      $i++;
       }
     }
+    else {
+      return false;
+    }
+    return true;
+  }
+
+  private function GetLock($fp)
+  {
+    $Timeout = 1000000; // timeout in us
+    $WaitFor = 100000; // us (do not change)
+    $this->Trace("Try to get FILE Lock");
+    while (!$this->flock($fp, LOCK_EX) && ($Timeout > 0)) { //  && ($Timeout > 0)
+      usleep($WaitFor);
+      $Timeout -= $WaitFor;
+    }
+    if ($Timeout <= 0) {
+    	$this->Trace("could not get lock (timeout occured)");
+      return false; // get lock failed!!!
+    }
+    $this->Trace("Lock created, Timeout: " . $Timeout);
+    return true;
+  }
+
+  private function flock($Unused1, $Unused2)
+  {
+    $LockFileName = FILE_LOCK;
+    if (!file_exists($LockFileName)) {
+      $LockFile = fopen($LockFileName, "w");
+      $LockKey = $this->InstanceName;
+      $LockEntry = $LockKey;
+      $this->Trace("LockKey: " . $LockKey);
+      fwrite($LockFile, $LockEntry);
+      $TempLockFileContent = file($LockFileName);
+      $VerifyLockKey = $TempLockFileContent[0];
+      if ($VerifyLockKey != $LockKey) {
+      	$this->Trace("LockKey not confirmed");
+      	$this->Trace("Expected: " . $LockKey);
+      	$this->Trace("Actual: " . $VerifyLockKey);
+      	unlink($LockFileName);
+      	return false;
+      }
+      $this->Trace("Lock created");
+      return true;
+    }
+    else {
+    	$this->Trace("File still locked");
+      return false;
+    }
+  }
+
+  private function funlock()
+  {
+  	$this->Trace("Try to unlock file");
+  	$LockFileName = FILE_LOCK;
+  	if (file_exists($LockFileName)) {
+      if (unlink($LockFileName)) {
+      	$this->Trace("Unlock file successful");
+      } else {
+      	$this->Trace("Unlock file not successful");
+      }
+  	}
+  	else {
+  		$this->Trace("Tryed to unlock a file but file \"$LockFileName\" doesn't exists");
+  	}
   }
 
 	private function WriteDataToFile()
@@ -162,6 +270,14 @@ class CDataHandler
     	$LineString .= "\n";
     	fwrite($this->fs, $LineString);
     }
+	}
+
+	public function Trace($Message)
+	{
+		$date = new DateTime();
+		$Time = $date->format('Y.m.d H:i:s');
+		fwrite($this->Log, $Time . " | " . $this->InstanceName . " | " . $Message . "\n");
+		flush();
 	}
 
 }

@@ -1,0 +1,63 @@
+2013.11.19 17:17:08 | Peter | Open DataHandler
+2013.11.19 17:17:08 | Peter | Try to get FILE Lock
+2013.11.19 17:17:08 | Peter | File still locked
+2013.11.19 17:17:08 | Peter | File still locked
+2013.11.19 17:17:08 | Peter | File still locked
+2013.11.19 17:17:08 | Peter | File still locked
+2013.11.19 17:17:08 | Peter | File still locked
+2013.11.19 17:17:08 | Peter | File still locked
+2013.11.19 17:17:08 | Peter | File still locked
+2013.11.19 17:17:08 | Peter | File still locked
+2013.11.19 17:17:09 | Peter | File still locked
+2013.11.19 17:17:09 | Peter | File still locked
+2013.11.19 17:17:09 | Peter | File still locked
+2013.11.19 17:17:09 | Peter | could not get lock (timeout occured)
+2013.11.19 17:17:09 | Peter | File could not be read!
+2013.11.19 17:17:09 | Peter | Unlock
+2013.11.19 17:17:09 | Peter | Tryed to unlock a file but file doesn't exists lock
+2013.11.19 17:17:09 | Peter | Close DataHandler
+2013.11.19 17:17:56 | Peter | Open DataHandler
+2013.11.19 17:17:56 | Peter | Try to get FILE Lock
+2013.11.19 17:17:56 | Peter | File still locked
+2013.11.19 17:17:56 | Peter | File still locked
+2013.11.19 17:17:56 | Peter | File still locked
+2013.11.19 17:17:56 | Peter | File still locked
+2013.11.19 17:17:56 | Peter | File still locked
+2013.11.19 17:17:56 | Peter | File still locked
+2013.11.19 17:17:56 | Peter | File still locked
+2013.11.19 17:17:56 | Peter | File still locked
+2013.11.19 17:17:56 | Peter | File still locked
+2013.11.19 17:17:57 | Peter | File still locked
+2013.11.19 17:17:57 | Peter | File still locked
+2013.11.19 17:17:57 | Peter | could not get lock (timeout occured)
+2013.11.19 17:17:57 | Peter | File could not be read!
+2013.11.19 17:17:57 | Peter | Unlock
+2013.11.19 17:17:57 | Peter | Tryed to unlock a file but file doesn't exists "lock"
+2013.11.19 17:17:57 | Peter | Close DataHandler
+2013.11.19 17:21:51 | Peter | Open DataHandler
+2013.11.19 17:21:51 | Peter | Try to get FILE Lock
+2013.11.19 17:21:51 | Peter | LockKey: Peter
+2013.11.19 17:21:51 | Peter | Lock created
+2013.11.19 17:21:51 | Peter | Lock created, Timeout: 1000000
+2013.11.19 17:21:51 | Peter | File Read successfully
+2013.11.19 17:21:51 | Peter | Try to unlock file
+2013.11.19 17:21:51 | Peter | Tryed to unlock a file but file "lock.lk" doesn't exists
+2013.11.19 17:21:51 | Peter | Close DataHandler
+2013.11.19 17:21:54 | Peter | Open DataHandler
+2013.11.19 17:21:54 | Peter | Try to get FILE Lock
+2013.11.19 17:21:54 | Peter | File still locked
+2013.11.19 17:21:54 | Peter | File still locked
+2013.11.19 17:21:54 | Peter | File still locked
+2013.11.19 17:21:54 | Peter | File still locked
+2013.11.19 17:21:55 | Peter | File still locked
+2013.11.19 17:21:55 | Peter | File still locked
+2013.11.19 17:21:55 | Peter | File still locked
+2013.11.19 17:21:55 | Peter | File still locked
+2013.11.19 17:21:55 | Peter | File still locked
+2013.11.19 17:21:55 | Peter | File still locked
+2013.11.19 17:21:55 | Peter | File still locked
+2013.11.19 17:21:55 | Peter | could not get lock (timeout occured)
+2013.11.19 17:21:55 | Peter | File could not be read!
+2013.11.19 17:21:55 | Peter | Try to unlock file
+2013.11.19 17:21:55 | Peter | Tryed to unlock a file but file "lock.lk" doesn't exists
+2013.11.19 17:21:55 | Peter | Close DataHandler

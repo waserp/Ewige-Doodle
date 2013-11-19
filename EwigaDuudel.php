@@ -6,60 +6,60 @@
   include 'CFormHandler.php';
   include 'CCookie.php';
   include 'CDoodleTable.php';
-
-  define("AMOUNT_OF_DAYS", "7");
+  include 'CDataHandler.php';
 
   $HTML = new HTMLOut();
   $Cookie = new Cookie();
+  $DataHandler = new CDataHandler($Cookie->GetClimperName());
 
-  $cWeekDays = "Mo,Di,Mi,Do,Fr,Sa,So";
+	$cWeekDays = "Mo,Di,Mi,Do,Fr,Sa,So";
   $cWeekDays = explode(",",$cWeekDays);
 
-  function AdvanceADay() {
-    $remaining = 0;
-    //echo ("Datum : " . date("W") . " " .  $dat . "\n");
-    $data = file("mydata.csv");
-    $fs = fopen("mydata.csv","w");
-    foreach ($data as $line) {
-      $LineArray = explode(",",$line);
-      //echo($line);
-      $flag = "0";
-      for ($i = 2; $i <= AMOUNT_OF_DAYS; $i++) {
-        $LineArray[$i]= trim($LineArray[$i]);
-        if (!empty($LineArray[$i])) { $flag = "1"; }
-      }
-      if ($flag == "1") { // only keep entry if there are active dates
-        $remaining = $remaining + 1;
-        fwrite($fs,$LineArray[0]);
-        for ($i = 2; $i <= AMOUNT_OF_DAYS; $i++) {
-          //echo ($i . " ");
-          fwrite($fs,"," . trim($LineArray[$i]));
-        }
-        fwrite($fs,",\n");
-      }
-    }
-    fclose($fs);
-  }// end function advanceADay
+//   function AdvanceADay() {
+//     $remaining = 0;
+//     //echo ("Datum : " . date("W") . " " .  $dat . "\n");
+//     $data = file("mydata.csv");
+//     $fs = fopen("mydata.csv","w");
+//     foreach ($data as $line) {
+//       $LineArray = explode(",",$line);
+//       //echo($line);
+//       $flag = "0";
+//       for ($i = 2; $i <= AMOUNT_OF_DAYS; $i++) {
+//         $LineArray[$i]= trim($LineArray[$i]);
+//         if (!empty($LineArray[$i])) { $flag = "1"; }
+//       }
+//       if ($flag == "1") { // only keep entry if there are active dates
+//         $remaining = $remaining + 1;
+//         fwrite($fs,$LineArray[0]);
+//         for ($i = 2; $i <= AMOUNT_OF_DAYS; $i++) {
+//           //echo ($i . " ");
+//           fwrite($fs,"," . trim($LineArray[$i]));
+//         }
+//         fwrite($fs,",\n");
+//       }
+//     }
+//     fclose($fs);
+//   }// end function advanceADay
 
-  function EditLine($NewLine) {
-    $Written = false;
-    $data = file("mydata.csv");
-    $fs = fopen("mydata.csv","w");
-    $NewLineArray= explode(",",$NewLine);
-    foreach ($data as $line) {
-      $LineArray = explode(",",$line);
-      if ($NewLineArray[0] == $LineArray[0]) {
-        fwrite($fs, trim($NewLine) . "\n");
-        $Written = true;
-      } else {
-        fwrite($fs, trim($line) . "\n");
-      }
-    }
-    if (!$Written) {
-      fwrite($fs, trim($NewLine) . "\n");
-    }
-    fclose($fs);
-  }
+//   function EditLine($NewLine) {
+//     $Written = false;
+//     $data = file("mydata.csv");
+//     $fs = fopen("mydata.csv","w");
+//     $NewLineArray= explode(",",$NewLine);
+//     foreach ($data as $line) {
+//       $LineArray = explode(",",$line);
+//       if ($NewLineArray[0] == $LineArray[0]) {
+//         fwrite($fs, trim($NewLine) . "\n");
+//         $Written = true;
+//       } else {
+//         fwrite($fs, trim($line) . "\n");
+//       }
+//     }
+//     if (!$Written) {
+//       fwrite($fs, trim($NewLine) . "\n");
+//     }
+//     fclose($fs);
+//   }
 
   function CleanEntry($Entry) {
    $val = trim($Entry);
@@ -71,17 +71,22 @@
   }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  if (@$_POST['formAdvance'] == "Advance") {
-    AdvanceADay();
-  }
-  $lastaccess = file("lastaccess.csv");
-  $lastaccess = trim($lastaccess{0});
-  $todaysday = @date(z);
-  while($lastaccess != $todaysday) {
-    AdvanceADay();
-    $lastaccess = $lastaccess + 1;
-  }
-  $fs = fopen("lastaccess.csv","w"); fwrite($fs,$todaysday); fclose($fs);
+//   if (@$_POST['formAdvance'] == "Advance") {
+// //    AdvanceADay();
+//     $DataHandler->IncrementDay();
+//   }
+//   $lastaccess = file("lastaccess.csv");
+//   $lastaccess = trim($lastaccess{0});
+//   $todaysday = @date(z);
+//   while($lastaccess != $todaysday) {
+// //    AdvanceADay();
+//     $DataHandler->IncrementDay();
+//     $lastaccess = $lastaccess + 1;
+//   }
+//   $fs = fopen("lastaccess.csv","w");
+//   fwrite($fs,$todaysday);
+//   fclose($fs);
+	$DataHandler->SetLastAccessAndIncrement();
 
   if (@$_POST['formLogout'] == "Logout") {
     $Cookie->SetCookie(""); // Clear Cookie
@@ -97,10 +102,11 @@
 
   if(@$_POST['formSubmit'] == "Submit") {
       $DataString = $Cookie->GetClimperName();
-      for ($Day = 1; $Day <= AMOUNT_OF_DAYS; $Day++) {
+      for ($Day = 1; $Day <= $DataHandler->GetAmountOfDays(); $Day++) {
       	$DataString .= CleanEntry($_POST['ck'.$Day]);
       }
-      EditLine($DataString);
+      $DataHandler->EditLine($DataString);
+//      EditLine($DataString);
   }
 
   $Table = new DoodleTable();
@@ -110,7 +116,7 @@
 
   // Generate Header with the days
   $Table->AddSingleCell("Klimper", CCell::COLOR_HEADER);
-  for ($i = $ActualWeekDay; $i <= ($ActualWeekDay + (AMOUNT_OF_DAYS -1)); $i++) {
+  for ($i = $ActualWeekDay; $i <= ($ActualWeekDay + ($DataHandler->GetAmountOfDays() -1)); $i++) {
     $Index = $i % 7;
     $Table->AddSingleCell($cWeekDays[$Index], CCell::COLOR_HEADER);
   }
@@ -183,9 +189,10 @@
   echo $HTML->GetPageTitle($PageTitle);
   echo "<h2>You are logged on as <b>". $Cookie->GetClimperName() . "</b></h2>\n";
 
-  echo ("<i>Server Date " . @date(r) . "</i>");
   echo ("<p>You can stay logged on if you want to.</p>\n");
-
+  if (!$DataHandler->GetDataReadResult()) {
+  	echo "<p class=\"warning\">Hmmm, datafile not ready! Come back later!</p>";
+  }
   echo $Form->StartForm();
   echo $Table->GetTable();
   echo $Form->GetForm();
@@ -194,7 +201,8 @@
   if ($Editrequest) { $Refreshtext = "cancle"; }
   echo "<a href=\"\">" . $Refreshtext . "</a>";
 	echo $Form->CloseForm();
-  echo $HTML->ClosingHtml();
+  echo ("<p class=\"footmsg_l\"><i>Server Date " . @date(r) . "</i></p>");
+	echo $HTML->ClosingHtml();
 
 ?>
 
