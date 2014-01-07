@@ -86,7 +86,8 @@
 //   $fs = fopen("lastaccess.csv","w");
 //   fwrite($fs,$todaysday);
 //   fclose($fs);
-	$DataHandler->SetLastAccessAndIncrement();
+
+  $DataHandler->SetLastAccessAndIncrement();
 
   if (@$_POST['formLogout'] == "Logout") {
     $Cookie->SetCookie(""); // Clear Cookie
@@ -106,7 +107,6 @@
       	$DataString .= CleanEntry($_POST['ck'.$Day]);
       }
       $DataHandler->EditLine($DataString);
-//      EditLine($DataString);
   }
 
   $Table = new DoodleTable();
@@ -123,10 +123,9 @@
   $Table->AddRow($Table->GetCellArray(), RowType::Header);
 
 
-  $data = file("mydata.csv"); //or die('Could not read file!');
   $ClimperAlreadyInDatabases = false;
-  foreach ($data as $line) {
-    $LineArray = explode(",",$line);
+  $LineArray = array();
+  while ($DataHandler->GetNextClimper($LineArray)) {
 		$PrintLine = true;
 
     if ($LineArray[0] == $Cookie->GetClimperName()) {
@@ -146,10 +145,10 @@
 	    foreach ($LineArray as $Element) {
 	      $Element = trim($Element);
 	      if (!empty($Element)) {
-	        $color = "style=\"background-color:#80FF80\"";
+//	        $color = "style=\"background-color:#80FF80\"";
 	        $Color = CCell::COLOR_YES_I_CAN;
 	      } else {
-	        $color = "style=\"background-color:#FF8080\"";
+//	        $color = "style=\"background-color:#FF8080\"";
 	        $Color = CCell::COLOR_NO_I_CANT;
 	      }
 				$Table->AddSingleCell($Element, $Color);
@@ -205,4 +204,3 @@
 	echo $HTML->ClosingHtml();
 
 ?>
-

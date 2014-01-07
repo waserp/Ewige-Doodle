@@ -1,0 +1,1531 @@
+1stInstance | construct
+1stInstance | Try to get FILE Lock
+1stInstance | LockKey: 0.46428700 1384010117
+1stInstance | LockKey not confirmed
+1stInstance | Expected: 0.46428700 1384010117
+1stInstance | Actual: 0.46428700 1384010117
+
+1stInstance | destruct
+1stInstance | Unlock
+1stInstance | Unlock file
+1stInstance | successful
+2013.11.19 16:37:41 | 1stInstance | Open DataHandler
+2013.11.19 16:37:41 | 1stInstance | Try to get FILE Lock
+2013.11.19 16:37:41 | 1stInstance | LockKey: 0.87183000 1384875461
+2013.11.19 16:37:41 | 1stInstance | LockKey not confirmed
+2013.11.19 16:37:41 | 1stInstance | Expected: 0.87183000 1384875461
+2013.11.19 16:37:41 | 1stInstance | Actual: 0.87183000 1384875461
+
+2013.11.19 16:37:41 | 1stInstance | Unlock
+2013.11.19 16:37:41 | 1stInstance | Unlock file
+2013.11.19 16:37:41 | 1stInstance | successful
+2013.11.19 16:37:41 | 1stInstance | Close DataHandler
+2013.11.19 16:40:10 | 1stInstance | Open DataHandler
+2013.11.19 16:40:10 | 1stInstance | Try to get FILE Lock
+2013.11.19 16:40:10 | 1stInstance | LockKey: 1stInstance
+2013.11.19 16:40:10 | 1stInstance | Lock created
+2013.11.19 16:40:10 | 1stInstance | Lock created, Timeout: 1000000
+2013.11.19 16:40:10 | 1stInstance | File Read successfully
+2013.11.19 16:40:10 | 2ndInstance | Open DataHandler
+2013.11.19 16:40:10 | 2ndInstance | Try to get FILE Lock
+2013.11.19 16:40:10 | 2ndInstance | File still locked
+2013.11.19 16:40:10 | 2ndInstance | File still locked
+2013.11.19 16:40:10 | 2ndInstance | File still locked
+2013.11.19 16:40:10 | 2ndInstance | File still locked
+2013.11.19 16:40:11 | 2ndInstance | File still locked
+2013.11.19 16:40:11 | 2ndInstance | File still locked
+2013.11.19 16:40:11 | 2ndInstance | File still locked
+2013.11.19 16:40:11 | 2ndInstance | File still locked
+2013.11.19 16:40:11 | 2ndInstance | File still locked
+2013.11.19 16:40:11 | 2ndInstance | File still locked
+2013.11.19 16:40:11 | 2ndInstance | File still locked
+2013.11.19 16:40:11 | 2ndInstance | could not get lock (timeout occured)
+2013.11.19 16:40:11 | 2ndInstance | File could not be read!
+2013.11.19 16:40:11 | 1stInstance | unset now
+2013.11.19 16:40:11 | 1stInstance | Unlock
+2013.11.19 16:40:11 | 1stInstance | Unlock file
+2013.11.19 16:40:11 | 1stInstance | successful
+2013.11.19 16:40:11 | 1stInstance | Close DataHandler
+2013.11.19 16:40:11 | 2ndInstance | Try to get FILE Lock
+2013.11.19 16:40:11 | 2ndInstance | LockKey: 2ndInstance
+2013.11.19 16:40:11 | 2ndInstance | Lock created
+2013.11.19 16:40:11 | 2ndInstance | Lock created, Timeout: 1000000
+2013.11.19 16:40:11 | 2ndInstance | File Read successfully
+2013.11.19 16:40:11 | 2ndInstance | Unlock
+2013.11.19 16:40:11 | 2ndInstance | Unlock file
+2013.11.19 16:40:11 | 2ndInstance | successful
+2013.11.19 16:40:11 | 2ndInstance | Close DataHandler
+2013.11.19 16:40:32 | 1stInstance | Open DataHandler
+2013.11.19 16:40:32 | 1stInstance | Try to get FILE Lock
+2013.11.19 16:40:32 | 1stInstance | LockKey: 1stInstance
+2013.11.19 16:40:32 | 1stInstance | Lock created
+2013.11.19 16:40:32 | 1stInstance | Lock created, Timeout: 1000000
+2013.11.19 16:40:32 | 1stInstance | File Read successfully
+2013.11.19 16:40:32 | 2ndInstance | Open DataHandler
+2013.11.19 16:40:32 | 2ndInstance | Try to get FILE Lock
+2013.11.19 16:40:32 | 2ndInstance | File still locked
+2013.11.19 16:40:32 | 2ndInstance | File still locked
+2013.11.19 16:40:32 | 2ndInstance | File still locked
+2013.11.19 16:40:32 | 2ndInstance | File still locked
+2013.11.19 16:40:32 | 2ndInstance | File still locked
+2013.11.19 16:40:33 | 2ndInstance | File still locked
+2013.11.19 16:40:33 | 2ndInstance | File still locked
+2013.11.19 16:40:33 | 2ndInstance | File still locked
+2013.11.19 16:40:33 | 2ndInstance | File still locked
+2013.11.19 16:40:33 | 2ndInstance | File still locked
+2013.11.19 16:40:33 | 2ndInstance | File still locked
+2013.11.19 16:40:33 | 2ndInstance | could not get lock (timeout occured)
+2013.11.19 16:40:33 | 2ndInstance | File could not be read!
+2013.11.19 16:40:33 | 1stInstance | unset now
+2013.11.19 16:40:33 | 1stInstance | Unlock
+2013.11.19 16:40:33 | 1stInstance | Unlock file
+2013.11.19 16:40:33 | 1stInstance | successful
+2013.11.19 16:40:33 | 1stInstance | Close DataHandler
+2013.11.19 16:40:33 | 2ndInstance | Try to get FILE Lock
+2013.11.19 16:40:33 | 2ndInstance | LockKey: 2ndInstance
+2013.11.19 16:40:33 | 2ndInstance | Lock created
+2013.11.19 16:40:33 | 2ndInstance | Lock created, Timeout: 1000000
+2013.11.19 16:40:33 | 2ndInstance | File Read successfully
+2013.11.19 16:40:33 | 2ndInstance | Unlock
+2013.11.19 16:40:33 | 2ndInstance | Unlock file
+2013.11.19 16:40:33 | 2ndInstance | successful
+2013.11.19 16:40:33 | 2ndInstance | Close DataHandler
+2013.11.19 16:42:23 | 1stInstance | Open DataHandler
+2013.11.19 16:42:23 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:42:23 | 1stInstance | Close DataHandler
+2013.11.19 16:42:23 | 1stInstance | Open DataHandler
+2013.11.19 16:42:23 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:42:23 | 1stInstance | Close DataHandler
+2013.11.19 16:42:23 | 1stInstance | Open DataHandler
+2013.11.19 16:42:23 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:42:23 | 1stInstance | Close DataHandler
+2013.11.19 16:42:23 | 1stInstance | Open DataHandler
+2013.11.19 16:42:23 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:42:23 | 1stInstance | Close DataHandler
+2013.11.19 16:42:23 | 2ndInstance | Open DataHandler
+2013.11.19 16:42:23 | 2ndInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:42:23 | 2ndInstance | Close DataHandler
+2013.11.19 16:42:23 | 1stInstance | Open DataHandler
+2013.11.19 16:43:46 | 1stInstance | Open DataHandler
+2013.11.19 16:43:46 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:43:46 | 1stInstance | Close DataHandler
+2013.11.19 16:43:46 | 1stInstance | Open DataHandler
+2013.11.19 16:43:46 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:43:46 | 1stInstance | Close DataHandler
+2013.11.19 16:43:46 | 1stInstance | Open DataHandler
+2013.11.19 16:43:46 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:43:46 | 1stInstance | Close DataHandler
+2013.11.19 16:43:46 | 1stInstance | Open DataHandler
+2013.11.19 16:43:46 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:43:46 | 1stInstance | Close DataHandler
+2013.11.19 16:43:46 | 2ndInstance | Open DataHandler
+2013.11.19 16:43:46 | 2ndInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:43:46 | 2ndInstance | Close DataHandler
+2013.11.19 16:43:46 | 1stInstance | Open DataHandler
+2013.11.19 16:43:46 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:43:46 | 1stInstance | Close DataHandler
+2013.11.19 16:43:46 | 2ndInstance | Open DataHandler
+2013.11.19 16:43:46 | 2ndInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:43:46 | 2ndInstance | Close DataHandler
+2013.11.19 16:43:46 | 1stInstance | Open DataHandler
+2013.11.19 16:43:46 | 1stInstance | Try to get FILE Lock
+2013.11.19 16:43:46 | 1stInstance | LockKey: 1stInstance
+2013.11.19 16:43:46 | 1stInstance | Lock created
+2013.11.19 16:43:46 | 1stInstance | Lock created, Timeout: 1000000
+2013.11.19 16:43:46 | 1stInstance | File Read successfully
+2013.11.19 16:43:46 | 2ndInstance | Open DataHandler
+2013.11.19 16:43:46 | 2ndInstance | Try to get FILE Lock
+2013.11.19 16:43:46 | 2ndInstance | File still locked
+2013.11.19 16:43:46 | 2ndInstance | File still locked
+2013.11.19 16:43:46 | 2ndInstance | File still locked
+2013.11.19 16:43:46 | 2ndInstance | File still locked
+2013.11.19 16:43:46 | 2ndInstance | File still locked
+2013.11.19 16:43:46 | 2ndInstance | File still locked
+2013.11.19 16:43:46 | 2ndInstance | File still locked
+2013.11.19 16:43:46 | 2ndInstance | File still locked
+2013.11.19 16:43:46 | 2ndInstance | File still locked
+2013.11.19 16:43:47 | 2ndInstance | File still locked
+2013.11.19 16:43:47 | 2ndInstance | File still locked
+2013.11.19 16:43:47 | 2ndInstance | could not get lock (timeout occured)
+2013.11.19 16:43:47 | 2ndInstance | File could not be read!
+2013.11.19 16:43:47 | 1stInstance | unset now
+2013.11.19 16:43:47 | 1stInstance | Unlock
+2013.11.19 16:43:47 | 1stInstance | Unlock file
+2013.11.19 16:43:47 | 1stInstance | successful
+2013.11.19 16:43:47 | 1stInstance | Close DataHandler
+2013.11.19 16:43:47 | 2ndInstance | Try to get FILE Lock
+2013.11.19 16:43:47 | 2ndInstance | LockKey: 2ndInstance
+2013.11.19 16:43:47 | 2ndInstance | Lock created
+2013.11.19 16:43:47 | 2ndInstance | Lock created, Timeout: 1000000
+2013.11.19 16:43:47 | 2ndInstance | File Read successfully
+2013.11.19 16:43:47 | 2ndInstance | Unlock
+2013.11.19 16:43:47 | 2ndInstance | Unlock file
+2013.11.19 16:43:47 | 2ndInstance | successful
+2013.11.19 16:43:47 | 2ndInstance | Close DataHandler
+2013.11.19 16:50:47 | 1stInstance | Open DataHandler
+2013.11.19 16:50:47 | 1stInstance | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:50:47 | 1stInstance | Close DataHandler
+2013.11.19 16:50:47 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2013.11.19 16:50:47 | 1stInstance_testIsClimperInDatabasePositive | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:50:47 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2013.11.19 16:50:47 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2013.11.19 16:50:47 | 1stInstance_testIsClimperInDatabaseNegative | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:50:47 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2013.11.19 16:50:47 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:50:47 | 1stInstance_testAddNewEmptyKlimperDataset | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:50:47 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:50:47 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:50:47 | 2ndInstance_testAddNewEmptyKlimperDataset | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:50:47 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:50:47 | 1stInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:50:47 | 1stInstance_testIncrementDay | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:50:47 | 1stInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:50:47 | 2ndInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:50:47 | 2ndInstance_testIncrementDay | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:50:47 | 2ndInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:50:47 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:50:47 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:50:47 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2013.11.19 16:50:47 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 16:50:47 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 16:50:47 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 16:50:47 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:50:47 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:50:47 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:47 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:47 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:47 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2013.11.19 16:50:48 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2013.11.19 16:50:48 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:50:48 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 16:50:48 | 1stInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 16:50:48 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | LockKey: 2ndInstance_testPreventMultipleAccessToDatafile
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 16:50:48 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:52:02 | 1stInstance_testEditLine | Open DataHandler
+2013.11.19 16:52:02 | 1stInstance_testEditLine | Try to get FILE Lock
+2013.11.19 16:52:02 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2013.11.19 16:52:02 | 1stInstance_testEditLine | Lock created
+2013.11.19 16:52:02 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2013.11.19 16:52:02 | 1stInstance_testEditLine | File Read successfully
+2013.11.19 16:52:02 | 1stInstance_testEditLine | Unlock
+2013.11.19 16:52:02 | 1stInstance_testEditLine | Unlock file
+2013.11.19 16:52:02 | 1stInstance_testEditLine | successful
+2013.11.19 16:52:02 | 1stInstance_testEditLine | Close DataHandler
+2013.11.19 16:52:02 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2013.11.19 16:52:02 | 1stInstance_testIsClimperInDatabasePositive | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:52:02 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2013.11.19 16:52:02 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2013.11.19 16:52:02 | 1stInstance_testIsClimperInDatabaseNegative | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:52:02 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2013.11.19 16:52:02 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:52:02 | 1stInstance_testAddNewEmptyKlimperDataset | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:52:02 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:52:02 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:52:02 | 2ndInstance_testAddNewEmptyKlimperDataset | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:52:02 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:52:02 | 1stInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:52:02 | 1stInstance_testIncrementDay | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:52:02 | 1stInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:52:02 | 2ndInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:52:02 | 2ndInstance_testIncrementDay | ERROR: Filepointer is NULL before destruction, LoadData was not called maybe.
+2013.11.19 16:52:02 | 2ndInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:52:02 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:52:02 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:52:02 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2013.11.19 16:52:02 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 16:52:02 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 16:52:02 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 16:52:02 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:52:02 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:52:02 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:02 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2013.11.19 16:52:03 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2013.11.19 16:52:03 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:52:03 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 16:52:03 | 1stInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 16:52:03 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | LockKey: 2ndInstance_testPreventMultipleAccessToDatafile
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 16:52:03 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:53:48 | 1stInstance_testEditLine | Open DataHandler
+2013.11.19 16:53:48 | 1stInstance_testEditLine | Try to get FILE Lock
+2013.11.19 16:53:48 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2013.11.19 16:53:48 | 1stInstance_testEditLine | Lock created
+2013.11.19 16:53:48 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2013.11.19 16:53:48 | 1stInstance_testEditLine | File Read successfully
+2013.11.19 16:53:48 | 1stInstance_testEditLine | Unlock
+2013.11.19 16:53:48 | 1stInstance_testEditLine | Unlock file
+2013.11.19 16:53:48 | 1stInstance_testEditLine | successful
+2013.11.19 16:53:48 | 1stInstance_testEditLine | Close DataHandler
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | Try to get FILE Lock
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | LockKey: 1stInstance_testIsClimperInDatabasePositive
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | Lock created
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | Lock created, Timeout: 1000000
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | File Read successfully
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | Unlock
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | Unlock file
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | successful
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | Try to get FILE Lock
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | LockKey: 1stInstance_testIsClimperInDatabaseNegative
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | Lock created
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | Lock created, Timeout: 1000000
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | File Read successfully
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | Unlock
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | Unlock file
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | successful
+2013.11.19 16:53:48 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | LockKey: 1stInstance_testAddNewEmptyKlimperDataset
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock file
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | successful
+2013.11.19 16:53:48 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | LockKey: 2ndInstance_testAddNewEmptyKlimperDataset
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock file
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | successful
+2013.11.19 16:53:48 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | Lock created
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | File Read successfully
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | Unlock
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | Unlock file
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | successful
+2013.11.19 16:53:48 | 1stInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | Lock created
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | File Read successfully
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | Unlock
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | Unlock file
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | successful
+2013.11.19 16:53:48 | 2ndInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 16:53:48 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:54:37 | 1stInstance_testEditLine | Open DataHandler
+2013.11.19 16:54:37 | 1stInstance_testEditLine | Try to get FILE Lock
+2013.11.19 16:54:37 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2013.11.19 16:54:37 | 1stInstance_testEditLine | Lock created
+2013.11.19 16:54:37 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2013.11.19 16:54:37 | 1stInstance_testEditLine | File Read successfully
+2013.11.19 16:54:37 | 1stInstance_testEditLine | Unlock
+2013.11.19 16:54:37 | 1stInstance_testEditLine | Unlock file
+2013.11.19 16:54:37 | 1stInstance_testEditLine | successful
+2013.11.19 16:54:37 | 1stInstance_testEditLine | Close DataHandler
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | Try to get FILE Lock
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | LockKey: 1stInstance_testIsClimperInDatabasePositive
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | Lock created
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | Lock created, Timeout: 1000000
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | File Read successfully
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | Unlock
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | Unlock file
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | successful
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | Try to get FILE Lock
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | LockKey: 1stInstance_testIsClimperInDatabaseNegative
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | Lock created
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | Lock created, Timeout: 1000000
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | File Read successfully
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | Unlock
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | Unlock file
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | successful
+2013.11.19 16:54:37 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | LockKey: 1stInstance_testAddNewEmptyKlimperDataset
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock file
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | successful
+2013.11.19 16:54:37 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | LockKey: 2ndInstance_testAddNewEmptyKlimperDataset
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock file
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | successful
+2013.11.19 16:54:37 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | Lock created
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | File Read successfully
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | Unlock
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | Unlock file
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | successful
+2013.11.19 16:54:37 | 1stInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | Lock created
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | File Read successfully
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | Unlock
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | Unlock file
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | successful
+2013.11.19 16:54:37 | 2ndInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:54:37 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:54:37 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:54:37 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2013.11.19 16:54:37 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 16:54:37 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 16:54:37 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:54:38 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2013.11.19 16:54:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2013.11.19 16:54:38 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2013.11.19 16:54:38 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:54:38 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 16:54:38 | 1stInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 16:54:38 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:54:38 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:54:38 | 2ndInstance_testPreventMultipleAccessToDatafile | Tryed to unlock a file but file doesn't exists
+2013.11.19 16:54:38 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:57:05 | 1stInstance_testEditLine | Open DataHandler
+2013.11.19 16:57:05 | 1stInstance_testEditLine | Try to get FILE Lock
+2013.11.19 16:57:05 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2013.11.19 16:57:05 | 1stInstance_testEditLine | Lock created
+2013.11.19 16:57:05 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2013.11.19 16:57:05 | 1stInstance_testEditLine | File Read successfully
+2013.11.19 16:57:05 | 1stInstance_testEditLine | Unlock
+2013.11.19 16:57:05 | 1stInstance_testEditLine | Unlock file
+2013.11.19 16:57:05 | 1stInstance_testEditLine | successful
+2013.11.19 16:57:05 | 1stInstance_testEditLine | Close DataHandler
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | Try to get FILE Lock
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | LockKey: 1stInstance_testIsClimperInDatabasePositive
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | Lock created
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | Lock created, Timeout: 1000000
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | File Read successfully
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | Unlock
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | Unlock file
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | successful
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | Try to get FILE Lock
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | LockKey: 1stInstance_testIsClimperInDatabaseNegative
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | Lock created
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | Lock created, Timeout: 1000000
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | File Read successfully
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | Unlock
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | Unlock file
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | successful
+2013.11.19 16:57:05 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | LockKey: 1stInstance_testAddNewEmptyKlimperDataset
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock file
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | successful
+2013.11.19 16:57:05 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | LockKey: 2ndInstance_testAddNewEmptyKlimperDataset
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock file
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | successful
+2013.11.19 16:57:05 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | Lock created
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | File Read successfully
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | Unlock
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | Unlock file
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | successful
+2013.11.19 16:57:05 | 1stInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | Open DataHandler
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | Lock created
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | File Read successfully
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | Unlock
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | Unlock file
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | successful
+2013.11.19 16:57:05 | 2ndInstance_testIncrementDay | Close DataHandler
+2013.11.19 16:57:05 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:57:05 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:57:05 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2013.11.19 16:57:05 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 16:57:05 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 16:57:05 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:05 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:06 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:57:06 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2013.11.19 16:57:06 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2013.11.19 16:57:06 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2013.11.19 16:57:06 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:57:06 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 16:57:06 | 1stInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 16:57:06 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:57:06 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:57:06 | 2ndInstance_testPreventMultipleAccessToDatafile | Tryed to unlock a file but file doesn't exists
+2013.11.19 16:57:06 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:58:37 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:58:37 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:58:37 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2013.11.19 16:58:37 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 16:58:37 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 16:58:37 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 16:58:37 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 16:58:37 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:58:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:37 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2013.11.19 16:58:38 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2013.11.19 16:58:38 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:58:38 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 16:58:38 | 1stInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 16:58:38 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | LockKey: 2ndInstance_testPreventMultipleAccessToDatafile
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 16:58:38 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 17:00:35 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 17:00:35 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 17:00:35 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2013.11.19 17:00:35 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 17:00:35 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 17:00:35 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 17:00:35 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 17:00:35 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 17:00:35 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2013.11.19 17:00:36 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2013.11.19 17:00:36 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 17:00:36 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 17:00:36 | 1stInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 17:00:36 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | LockKey: 2ndInstance_testPreventMultipleAccessToDatafile
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 17:00:36 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 17:01:20 | 1stInstance_testEditLine | Open DataHandler
+2013.11.19 17:01:20 | 1stInstance_testEditLine | Try to get FILE Lock
+2013.11.19 17:01:20 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2013.11.19 17:01:20 | 1stInstance_testEditLine | Lock created
+2013.11.19 17:01:20 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2013.11.19 17:01:20 | 1stInstance_testEditLine | File Read successfully
+2013.11.19 17:01:20 | 1stInstance_testEditLine | Unlock
+2013.11.19 17:01:20 | 1stInstance_testEditLine | Unlock file
+2013.11.19 17:01:20 | 1stInstance_testEditLine | successful
+2013.11.19 17:01:20 | 1stInstance_testEditLine | Close DataHandler
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | Try to get FILE Lock
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | LockKey: 1stInstance_testIsClimperInDatabasePositive
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | Lock created
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | Lock created, Timeout: 1000000
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | File Read successfully
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | Unlock
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | Unlock file
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | successful
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | Try to get FILE Lock
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | LockKey: 1stInstance_testIsClimperInDatabaseNegative
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | Lock created
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | Lock created, Timeout: 1000000
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | File Read successfully
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | Unlock
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | Unlock file
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | successful
+2013.11.19 17:01:20 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | LockKey: 1stInstance_testAddNewEmptyKlimperDataset
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock file
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | successful
+2013.11.19 17:01:20 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | LockKey: 2ndInstance_testAddNewEmptyKlimperDataset
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock file
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | successful
+2013.11.19 17:01:20 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | Open DataHandler
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | Lock created
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | File Read successfully
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | Unlock
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | Unlock file
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | successful
+2013.11.19 17:01:20 | 1stInstance_testIncrementDay | Close DataHandler
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | Open DataHandler
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | Lock created
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | File Read successfully
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | Unlock
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | Unlock file
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | successful
+2013.11.19 17:01:20 | 2ndInstance_testIncrementDay | Close DataHandler
+2013.11.19 17:01:20 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 17:01:20 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 17:01:20 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2013.11.19 17:01:20 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 17:01:20 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 17:01:20 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 17:01:20 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2013.11.19 17:01:20 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 17:01:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2013.11.19 17:01:21 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2013.11.19 17:01:21 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 17:01:21 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 17:01:21 | 1stInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 17:01:21 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | LockKey: 2ndInstance_testPreventMultipleAccessToDatafile
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock file
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | successful
+2013.11.19 17:01:21 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2014.01.07 20:07:28 | 1stInstance_testEditLine | Open DataHandler
+2014.01.07 20:07:28 | 1stInstance_testEditLine | Try to get FILE Lock
+2014.01.07 20:07:28 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2014.01.07 20:07:28 | 1stInstance_testEditLine | Lock created
+2014.01.07 20:07:28 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2014.01.07 20:07:28 | 1stInstance_testEditLine | File Read successfully
+2014.01.07 20:07:28 | 1stInstance_testEditLine | Try to unlock file
+2014.01.07 20:07:28 | 1stInstance_testEditLine | Unlock file successful
+2014.01.07 20:07:28 | 1stInstance_testEditLine | Close DataHandler
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabasePositive | Try to get FILE Lock
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabasePositive | LockKey: 1stInstance_testIsClimperInDatabasePositive
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabasePositive | Lock created
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabasePositive | Lock created, Timeout: 1000000
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabasePositive | File Read successfully
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabasePositive | Try to unlock file
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabasePositive | Unlock file successful
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabaseNegative | Try to get FILE Lock
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabaseNegative | LockKey: 1stInstance_testIsClimperInDatabaseNegative
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabaseNegative | Lock created
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabaseNegative | Lock created, Timeout: 1000000
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabaseNegative | File Read successfully
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabaseNegative | Try to unlock file
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabaseNegative | Unlock file successful
+2014.01.07 20:07:28 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2014.01.07 20:07:28 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:07:28 | 1stInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:07:28 | 1stInstance_testAddNewEmptyKlimperDataset | LockKey: 1stInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:07:28 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:07:28 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:07:28 | 1stInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:07:28 | 1stInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:07:28 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:07:28 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:07:28 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:07:28 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:07:28 | 2ndInstance_testAddNewEmptyKlimperDataset | LockKey: 2ndInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:07:28 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:07:28 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:07:28 | 2ndInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:07:28 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:07:28 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:07:28 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:07:28 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:07:28 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:07:28 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:07:28 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:07:28 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:07:28 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:07:28 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:07:28 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:07:28 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:07:28 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:07:28 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:07:28 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:07:28 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:07:28 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:07:28 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:07:28 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:07:28 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:07:28 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:07:28 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2014.01.07 20:07:28 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:07:28 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2014.01.07 20:07:28 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2014.01.07 20:07:28 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2014.01.07 20:07:28 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2014.01.07 20:07:28 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2014.01.07 20:07:28 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:07:28 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:28 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:28 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2014.01.07 20:07:29 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2014.01.07 20:07:29 | 1stInstance_testPreventMultipleAccessToDatafile | Try to unlock file
+2014.01.07 20:07:29 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file successful
+2014.01.07 20:07:29 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | LockKey: 2ndInstance_testPreventMultipleAccessToDatafile
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to unlock file
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock file successful
+2014.01.07 20:07:29 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2014.01.07 20:12:09 | 1stInstance_testEditLine | Open DataHandler
+2014.01.07 20:12:09 | 1stInstance_testEditLine | Try to get FILE Lock
+2014.01.07 20:12:09 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2014.01.07 20:12:09 | 1stInstance_testEditLine | Lock created
+2014.01.07 20:12:09 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2014.01.07 20:12:09 | 1stInstance_testEditLine | File Read successfully
+2014.01.07 20:12:09 | 1stInstance_testEditLine | Try to unlock file
+2014.01.07 20:12:09 | 1stInstance_testEditLine | Unlock file successful
+2014.01.07 20:12:09 | 1stInstance_testEditLine | Close DataHandler
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabasePositive | Try to get FILE Lock
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabasePositive | LockKey: 1stInstance_testIsClimperInDatabasePositive
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabasePositive | Lock created
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabasePositive | Lock created, Timeout: 1000000
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabasePositive | File Read successfully
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabasePositive | Try to unlock file
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabasePositive | Unlock file successful
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabaseNegative | Try to get FILE Lock
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabaseNegative | LockKey: 1stInstance_testIsClimperInDatabaseNegative
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabaseNegative | Lock created
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabaseNegative | Lock created, Timeout: 1000000
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabaseNegative | File Read successfully
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabaseNegative | Try to unlock file
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabaseNegative | Unlock file successful
+2014.01.07 20:12:09 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2014.01.07 20:12:09 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:12:09 | 1stInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:12:09 | 1stInstance_testAddNewEmptyKlimperDataset | LockKey: 1stInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:12:09 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:12:09 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:12:09 | 1stInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:12:09 | 1stInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:12:09 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:12:09 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:12:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:12:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:12:09 | 2ndInstance_testAddNewEmptyKlimperDataset | LockKey: 2ndInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:12:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:12:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:12:09 | 2ndInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:12:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:12:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:12:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:12:09 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:12:09 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:12:09 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:12:09 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:12:09 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:12:09 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:12:09 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:12:09 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:12:09 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:12:09 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:12:09 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:12:09 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:12:09 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:12:09 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:12:09 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:12:09 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:12:09 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:12:09 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:12:09 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2014.01.07 20:12:09 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:12:09 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2014.01.07 20:12:09 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2014.01.07 20:12:09 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2014.01.07 20:12:09 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2014.01.07 20:12:10 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2014.01.07 20:12:10 | 1stInstance_testPreventMultipleAccessToDatafile | Try to unlock file
+2014.01.07 20:12:10 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file successful
+2014.01.07 20:12:10 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | LockKey: 2ndInstance_testPreventMultipleAccessToDatafile
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to unlock file
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock file successful
+2014.01.07 20:12:10 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2014.01.07 20:13:56 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:13:56 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:13:56 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:13:56 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:13:56 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:13:56 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:13:56 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:13:56 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:13:56 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:13:56 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:13:56 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:13:56 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:13:56 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:13:56 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:13:56 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:13:56 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:13:56 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:13:56 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:19:05 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:19:05 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:19:05 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:19:05 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:19:05 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:19:05 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:19:05 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:19:05 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:19:05 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:19:05 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:19:05 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:19:05 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:19:05 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:19:05 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:19:05 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:19:05 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:19:05 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:19:05 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:21:36 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:21:36 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:21:36 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:21:36 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:21:36 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:21:36 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:21:36 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:21:36 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:21:36 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:21:36 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:21:36 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:21:36 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:21:36 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:21:36 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:21:36 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:21:36 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:21:36 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:21:36 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:22:18 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:22:18 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:22:18 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:22:18 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:22:18 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:22:18 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:22:18 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:22:18 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:22:18 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:22:18 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:22:18 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:22:18 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:22:18 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:22:18 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:22:18 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:22:18 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:22:18 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:22:18 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:22:43 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:22:43 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:22:43 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:22:43 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:22:43 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:22:43 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:22:43 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:22:43 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:22:43 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:22:43 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:22:43 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:22:43 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:22:43 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:22:43 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:22:43 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:22:43 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:22:43 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:22:43 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:24:14 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:24:14 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:24:14 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:24:14 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:24:14 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:24:14 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:24:14 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:24:14 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:24:14 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:24:14 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:24:14 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:24:14 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:24:14 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:24:14 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:24:14 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:24:14 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:24:14 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:24:14 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:24:47 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:24:47 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:24:47 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:24:47 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:24:47 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:24:47 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:24:47 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:24:47 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:24:47 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:24:47 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:24:47 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:24:47 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:24:47 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:24:47 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:24:47 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:24:47 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:24:47 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:24:47 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:27:24 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:27:24 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:27:24 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:27:24 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:27:24 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:27:24 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:27:24 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:27:24 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:27:24 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:27:24 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:27:24 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:27:24 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:27:24 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:27:24 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:27:24 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:27:24 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:27:24 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:27:24 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:29:10 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:29:10 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:29:10 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:29:10 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:29:10 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:29:10 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:29:10 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:29:10 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:29:10 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:29:10 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:29:10 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:29:10 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:29:10 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:29:10 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:29:10 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:29:10 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:29:10 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:29:10 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:30:28 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:30:28 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:30:28 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:30:28 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:30:28 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:30:28 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:30:28 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:30:28 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:30:28 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:31:20 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:31:20 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:31:20 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:31:20 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:31:20 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:31:20 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:31:20 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:31:20 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:31:20 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:31:20 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:31:20 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:31:20 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:31:20 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:31:20 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:31:20 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:31:20 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:31:20 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:31:20 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:32:08 | 1stInstance_testEditLine | Open DataHandler
+2014.01.07 20:32:08 | 1stInstance_testEditLine | Try to get FILE Lock
+2014.01.07 20:32:08 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2014.01.07 20:32:08 | 1stInstance_testEditLine | Lock created
+2014.01.07 20:32:08 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2014.01.07 20:32:08 | 1stInstance_testEditLine | File Read successfully
+2014.01.07 20:32:08 | 1stInstance_testEditLine | Try to unlock file
+2014.01.07 20:32:08 | 1stInstance_testEditLine | Unlock file successful
+2014.01.07 20:32:08 | 1stInstance_testEditLine | Close DataHandler
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabasePositive | Try to get FILE Lock
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabasePositive | LockKey: 1stInstance_testIsClimperInDatabasePositive
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabasePositive | Lock created
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabasePositive | Lock created, Timeout: 1000000
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabasePositive | File Read successfully
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabasePositive | Try to unlock file
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabasePositive | Unlock file successful
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabaseNegative | Try to get FILE Lock
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabaseNegative | LockKey: 1stInstance_testIsClimperInDatabaseNegative
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabaseNegative | Lock created
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabaseNegative | Lock created, Timeout: 1000000
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabaseNegative | File Read successfully
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabaseNegative | Try to unlock file
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabaseNegative | Unlock file successful
+2014.01.07 20:32:08 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2014.01.07 20:32:08 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:32:08 | 1stInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:32:08 | 1stInstance_testAddNewEmptyKlimperDataset | LockKey: 1stInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:32:08 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:32:08 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:32:08 | 1stInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:32:08 | 1stInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:32:08 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:32:08 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:32:08 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:32:08 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:32:08 | 2ndInstance_testAddNewEmptyKlimperDataset | LockKey: 2ndInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:32:08 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:32:08 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:32:08 | 2ndInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:32:08 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:32:08 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:32:08 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:32:08 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:32:08 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:32:08 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:32:08 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:32:08 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:32:08 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:32:08 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:32:08 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:32:08 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:32:08 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:32:08 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:32:08 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:32:08 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:32:08 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:32:08 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:32:08 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:32:08 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:32:08 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:32:08 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2014.01.07 20:32:08 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:32:08 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2014.01.07 20:32:08 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2014.01.07 20:32:08 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2014.01.07 20:32:08 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2014.01.07 20:32:08 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2014.01.07 20:32:08 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:32:08 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:08 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:08 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2014.01.07 20:32:09 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2014.01.07 20:32:09 | 1stInstance_testPreventMultipleAccessToDatafile | Try to unlock file
+2014.01.07 20:32:09 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file successful
+2014.01.07 20:32:09 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | LockKey: 2ndInstance_testPreventMultipleAccessToDatafile
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to unlock file
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock file successful
+2014.01.07 20:32:09 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2014.01.07 20:46:28 | testGetNextClimper | Open DataHandler
+2014.01.07 20:46:28 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:46:28 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:46:28 | testGetNextClimper | Lock created
+2014.01.07 20:46:28 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:46:28 | testGetNextClimper | File Read successfully
+2014.01.07 20:46:37 | testGetNextClimper | Open DataHandler
+2014.01.07 20:46:37 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:46:37 | testGetNextClimper | File still locked
+2014.01.07 20:46:37 | testGetNextClimper | File still locked
+2014.01.07 20:46:37 | testGetNextClimper | File still locked
+2014.01.07 20:46:37 | testGetNextClimper | File still locked
+2014.01.07 20:46:38 | testGetNextClimper | File still locked
+2014.01.07 20:46:38 | testGetNextClimper | File still locked
+2014.01.07 20:46:38 | testGetNextClimper | File still locked
+2014.01.07 20:46:38 | testGetNextClimper | File still locked
+2014.01.07 20:46:38 | testGetNextClimper | File still locked
+2014.01.07 20:46:38 | testGetNextClimper | File still locked
+2014.01.07 20:46:38 | testGetNextClimper | File still locked
+2014.01.07 20:46:38 | testGetNextClimper | could not get lock (timeout occured)
+2014.01.07 20:46:38 | testGetNextClimper | File could not be read!
+2014.01.07 20:46:38 | testGetNextClimper | Try to unlock file
+2014.01.07 20:46:38 | testGetNextClimper | Unlock file successful
+2014.01.07 20:46:38 | testGetNextClimper | Close DataHandler
+2014.01.07 20:47:30 | testGetNextClimper | Open DataHandler
+2014.01.07 20:47:30 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:47:30 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:47:30 | testGetNextClimper | Lock created
+2014.01.07 20:47:30 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:47:30 | testGetNextClimper | File Read successfully
+2014.01.07 20:47:30 | testGetNextClimper | Try to unlock file
+2014.01.07 20:47:30 | testGetNextClimper | Unlock file successful
+2014.01.07 20:47:30 | testGetNextClimper | Close DataHandler
+2014.01.07 20:50:39 | testGetNextClimper | Open DataHandler
+2014.01.07 20:50:39 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:50:39 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:50:39 | testGetNextClimper | Lock created
+2014.01.07 20:50:39 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:50:39 | testGetNextClimper | File Read successfully
+2014.01.07 20:50:39 | testGetNextClimper | Try to unlock file
+2014.01.07 20:50:39 | testGetNextClimper | Unlock file successful
+2014.01.07 20:50:39 | testGetNextClimper | Close DataHandler
+2014.01.07 20:52:16 | testGetNextClimper | Open DataHandler
+2014.01.07 20:52:16 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:52:16 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:52:16 | testGetNextClimper | Lock created
+2014.01.07 20:52:16 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:52:16 | testGetNextClimper | File Read successfully
+2014.01.07 20:52:16 | testGetNextClimper | Try to unlock file
+2014.01.07 20:52:16 | testGetNextClimper | Unlock file successful
+2014.01.07 20:52:16 | testGetNextClimper | Close DataHandler
+2014.01.07 20:52:57 | testGetNextClimper | Open DataHandler
+2014.01.07 20:52:57 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:52:57 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:52:57 | testGetNextClimper | Lock created
+2014.01.07 20:52:57 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:52:57 | testGetNextClimper | File Read successfully
+2014.01.07 20:52:57 | testGetNextClimper | Try to unlock file
+2014.01.07 20:52:57 | testGetNextClimper | Unlock file successful
+2014.01.07 20:52:57 | testGetNextClimper | Close DataHandler
+2014.01.07 20:53:34 | testGetNextClimper | Open DataHandler
+2014.01.07 20:53:34 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:53:34 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:53:34 | testGetNextClimper | Lock created
+2014.01.07 20:53:34 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:53:34 | testGetNextClimper | File Read successfully
+2014.01.07 20:53:34 | testGetNextClimper | Try to unlock file
+2014.01.07 20:53:34 | testGetNextClimper | Unlock file successful
+2014.01.07 20:53:34 | testGetNextClimper | Close DataHandler
+2014.01.07 20:54:10 | testGetNextClimper | Open DataHandler
+2014.01.07 20:54:10 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:54:10 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:54:10 | testGetNextClimper | Lock created
+2014.01.07 20:54:10 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:54:10 | testGetNextClimper | File Read successfully
+2014.01.07 20:54:10 | testGetNextClimper | Try to unlock file
+2014.01.07 20:54:10 | testGetNextClimper | Unlock file successful
+2014.01.07 20:54:10 | testGetNextClimper | Close DataHandler
+2014.01.07 20:54:32 | testGetNextClimper | Open DataHandler
+2014.01.07 20:54:32 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:54:32 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:54:32 | testGetNextClimper | Lock created
+2014.01.07 20:54:32 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:54:32 | testGetNextClimper | File Read successfully
+2014.01.07 20:54:32 | testGetNextClimper | Try to unlock file
+2014.01.07 20:54:32 | testGetNextClimper | Unlock file successful
+2014.01.07 20:54:32 | testGetNextClimper | Close DataHandler
+2014.01.07 20:54:50 | testGetNextClimper | Open DataHandler
+2014.01.07 20:54:50 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:54:50 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:54:50 | testGetNextClimper | Lock created
+2014.01.07 20:54:50 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:54:50 | testGetNextClimper | File Read successfully
+2014.01.07 20:54:50 | testGetNextClimper | Try to unlock file
+2014.01.07 20:54:50 | testGetNextClimper | Unlock file successful
+2014.01.07 20:54:50 | testGetNextClimper | Close DataHandler
+2014.01.07 20:55:04 | testGetNextClimper | Open DataHandler
+2014.01.07 20:55:04 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:55:04 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:55:04 | testGetNextClimper | Lock created
+2014.01.07 20:55:04 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:55:04 | testGetNextClimper | File Read successfully
+2014.01.07 20:55:04 | testGetNextClimper | Try to unlock file
+2014.01.07 20:55:04 | testGetNextClimper | Unlock file successful
+2014.01.07 20:55:04 | testGetNextClimper | Close DataHandler
+2014.01.07 20:55:30 | testGetNextClimper | Open DataHandler
+2014.01.07 20:55:30 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:55:30 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:55:30 | testGetNextClimper | Lock created
+2014.01.07 20:55:30 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:55:30 | testGetNextClimper | File Read successfully
+2014.01.07 20:55:30 | testGetNextClimper | Try to unlock file
+2014.01.07 20:55:30 | testGetNextClimper | Unlock file successful
+2014.01.07 20:55:30 | testGetNextClimper | Close DataHandler
+2014.01.07 20:57:07 | testGetNextClimper | Open DataHandler
+2014.01.07 20:57:07 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:57:07 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:57:07 | testGetNextClimper | Lock created
+2014.01.07 20:57:07 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:57:07 | testGetNextClimper | File Read successfully
+2014.01.07 20:57:07 | testGetNextClimper | Try to unlock file
+2014.01.07 20:57:07 | testGetNextClimper | Unlock file successful
+2014.01.07 20:57:07 | testGetNextClimper | Close DataHandler
+2014.01.07 20:57:27 | testGetNextClimper | Open DataHandler
+2014.01.07 20:57:27 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:57:27 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:57:27 | testGetNextClimper | Lock created
+2014.01.07 20:57:27 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:57:27 | testGetNextClimper | File Read successfully
+2014.01.07 20:57:27 | testGetNextClimper | Try to unlock file
+2014.01.07 20:57:27 | testGetNextClimper | Unlock file successful
+2014.01.07 20:57:27 | testGetNextClimper | Close DataHandler
+2014.01.07 20:57:33 | testGetNextClimper | Open DataHandler
+2014.01.07 20:57:33 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:57:33 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:57:33 | testGetNextClimper | Lock created
+2014.01.07 20:57:33 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:57:33 | testGetNextClimper | File Read successfully
+2014.01.07 20:57:33 | testGetNextClimper | Try to unlock file
+2014.01.07 20:57:33 | testGetNextClimper | Unlock file successful
+2014.01.07 20:57:33 | testGetNextClimper | Close DataHandler
+2014.01.07 20:58:09 | testGetNextClimper | Open DataHandler
+2014.01.07 20:58:09 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:58:09 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:58:09 | testGetNextClimper | Lock created
+2014.01.07 20:58:09 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:58:09 | testGetNextClimper | File Read successfully
+2014.01.07 20:58:09 | testGetNextClimper | Try to unlock file
+2014.01.07 20:58:09 | testGetNextClimper | Unlock file successful
+2014.01.07 20:58:09 | testGetNextClimper | Close DataHandler
+2014.01.07 20:58:09 | 1stInstance_testEditLine | Open DataHandler
+2014.01.07 20:58:09 | 1stInstance_testEditLine | Try to get FILE Lock
+2014.01.07 20:58:09 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2014.01.07 20:58:09 | 1stInstance_testEditLine | Lock created
+2014.01.07 20:58:09 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2014.01.07 20:58:09 | 1stInstance_testEditLine | File Read successfully
+2014.01.07 20:58:09 | 1stInstance_testEditLine | Try to unlock file
+2014.01.07 20:58:09 | 1stInstance_testEditLine | Unlock file successful
+2014.01.07 20:58:09 | 1stInstance_testEditLine | Close DataHandler
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabasePositive | Try to get FILE Lock
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabasePositive | LockKey: 1stInstance_testIsClimperInDatabasePositive
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabasePositive | Lock created
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabasePositive | Lock created, Timeout: 1000000
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabasePositive | File Read successfully
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabasePositive | Try to unlock file
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabasePositive | Unlock file successful
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabaseNegative | Try to get FILE Lock
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabaseNegative | LockKey: 1stInstance_testIsClimperInDatabaseNegative
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabaseNegative | Lock created
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabaseNegative | Lock created, Timeout: 1000000
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabaseNegative | File Read successfully
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabaseNegative | Try to unlock file
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabaseNegative | Unlock file successful
+2014.01.07 20:58:09 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2014.01.07 20:58:09 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:58:09 | 1stInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:58:09 | 1stInstance_testAddNewEmptyKlimperDataset | LockKey: 1stInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:58:09 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:58:09 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:58:09 | 1stInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:58:09 | 1stInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:58:09 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:58:09 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:58:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:58:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:58:09 | 2ndInstance_testAddNewEmptyKlimperDataset | LockKey: 2ndInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:58:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:58:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:58:09 | 2ndInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:58:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:58:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:58:09 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:58:09 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:58:09 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:58:09 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:58:09 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:58:09 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:58:09 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:58:09 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:58:09 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:58:09 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:58:09 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:58:09 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:58:09 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:58:09 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:58:09 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:58:09 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:58:09 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:58:09 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:58:09 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:58:19 | testGetNextClimper | Open DataHandler
+2014.01.07 20:58:19 | testGetNextClimper | Try to get FILE Lock
+2014.01.07 20:58:19 | testGetNextClimper | LockKey: testGetNextClimper
+2014.01.07 20:58:19 | testGetNextClimper | Lock created
+2014.01.07 20:58:19 | testGetNextClimper | Lock created, Timeout: 1000000
+2014.01.07 20:58:19 | testGetNextClimper | File Read successfully
+2014.01.07 20:58:19 | testGetNextClimper | Try to unlock file
+2014.01.07 20:58:19 | testGetNextClimper | Unlock file successful
+2014.01.07 20:58:19 | testGetNextClimper | Close DataHandler
+2014.01.07 20:58:19 | 1stInstance_testEditLine | Open DataHandler
+2014.01.07 20:58:19 | 1stInstance_testEditLine | Try to get FILE Lock
+2014.01.07 20:58:19 | 1stInstance_testEditLine | LockKey: 1stInstance_testEditLine
+2014.01.07 20:58:19 | 1stInstance_testEditLine | Lock created
+2014.01.07 20:58:19 | 1stInstance_testEditLine | Lock created, Timeout: 1000000
+2014.01.07 20:58:19 | 1stInstance_testEditLine | File Read successfully
+2014.01.07 20:58:19 | 1stInstance_testEditLine | Try to unlock file
+2014.01.07 20:58:19 | 1stInstance_testEditLine | Unlock file successful
+2014.01.07 20:58:19 | 1stInstance_testEditLine | Close DataHandler
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabasePositive | Open DataHandler
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabasePositive | Try to get FILE Lock
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabasePositive | LockKey: 1stInstance_testIsClimperInDatabasePositive
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabasePositive | Lock created
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabasePositive | Lock created, Timeout: 1000000
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabasePositive | File Read successfully
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabasePositive | Try to unlock file
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabasePositive | Unlock file successful
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabasePositive | Close DataHandler
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabaseNegative | Open DataHandler
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabaseNegative | Try to get FILE Lock
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabaseNegative | LockKey: 1stInstance_testIsClimperInDatabaseNegative
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabaseNegative | Lock created
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabaseNegative | Lock created, Timeout: 1000000
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabaseNegative | File Read successfully
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabaseNegative | Try to unlock file
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabaseNegative | Unlock file successful
+2014.01.07 20:58:19 | 1stInstance_testIsClimperInDatabaseNegative | Close DataHandler
+2014.01.07 20:58:19 | 1stInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:58:19 | 1stInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:58:19 | 1stInstance_testAddNewEmptyKlimperDataset | LockKey: 1stInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:58:19 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:58:19 | 1stInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:58:19 | 1stInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:58:19 | 1stInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:58:19 | 1stInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:58:19 | 1stInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:58:19 | 2ndInstance_testAddNewEmptyKlimperDataset | Open DataHandler
+2014.01.07 20:58:19 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to get FILE Lock
+2014.01.07 20:58:19 | 2ndInstance_testAddNewEmptyKlimperDataset | LockKey: 2ndInstance_testAddNewEmptyKlimperDataset
+2014.01.07 20:58:19 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created
+2014.01.07 20:58:19 | 2ndInstance_testAddNewEmptyKlimperDataset | Lock created, Timeout: 1000000
+2014.01.07 20:58:19 | 2ndInstance_testAddNewEmptyKlimperDataset | File Read successfully
+2014.01.07 20:58:19 | 2ndInstance_testAddNewEmptyKlimperDataset | Try to unlock file
+2014.01.07 20:58:19 | 2ndInstance_testAddNewEmptyKlimperDataset | Unlock file successful
+2014.01.07 20:58:19 | 2ndInstance_testAddNewEmptyKlimperDataset | Close DataHandler
+2014.01.07 20:58:19 | 1stInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:58:19 | 1stInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:58:19 | 1stInstance_testIncrementDay | LockKey: 1stInstance_testIncrementDay
+2014.01.07 20:58:19 | 1stInstance_testIncrementDay | Lock created
+2014.01.07 20:58:19 | 1stInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:58:19 | 1stInstance_testIncrementDay | File Read successfully
+2014.01.07 20:58:19 | 1stInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:58:19 | 1stInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:58:19 | 1stInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:58:19 | 2ndInstance_testIncrementDay | Open DataHandler
+2014.01.07 20:58:19 | 2ndInstance_testIncrementDay | Try to get FILE Lock
+2014.01.07 20:58:19 | 2ndInstance_testIncrementDay | LockKey: 2ndInstance_testIncrementDay
+2014.01.07 20:58:19 | 2ndInstance_testIncrementDay | Lock created
+2014.01.07 20:58:19 | 2ndInstance_testIncrementDay | Lock created, Timeout: 1000000
+2014.01.07 20:58:19 | 2ndInstance_testIncrementDay | File Read successfully
+2014.01.07 20:58:19 | 2ndInstance_testIncrementDay | Try to unlock file
+2014.01.07 20:58:19 | 2ndInstance_testIncrementDay | Unlock file successful
+2014.01.07 20:58:19 | 2ndInstance_testIncrementDay | Close DataHandler
+2014.01.07 20:58:19 | 1stInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2014.01.07 20:58:19 | 1stInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:58:19 | 1stInstance_testPreventMultipleAccessToDatafile | LockKey: 1stInstance_testPreventMultipleAccessToDatafile
+2014.01.07 20:58:19 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created
+2014.01.07 20:58:19 | 1stInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2014.01.07 20:58:19 | 1stInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2014.01.07 20:58:19 | 2ndInstance_testPreventMultipleAccessToDatafile | Open DataHandler
+2014.01.07 20:58:19 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:58:19 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:19 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:19 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:19 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:19 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File still locked
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | could not get lock (timeout occured)
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File could not be read!
+2014.01.07 20:58:20 | 1stInstance_testPreventMultipleAccessToDatafile | unset now
+2014.01.07 20:58:20 | 1stInstance_testPreventMultipleAccessToDatafile | Try to unlock file
+2014.01.07 20:58:20 | 1stInstance_testPreventMultipleAccessToDatafile | Unlock file successful
+2014.01.07 20:58:20 | 1stInstance_testPreventMultipleAccessToDatafile | Close DataHandler
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to get FILE Lock
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | LockKey: 2ndInstance_testPreventMultipleAccessToDatafile
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | Lock created, Timeout: 1000000
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | File Read successfully
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | Try to unlock file
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | Unlock file successful
+2014.01.07 20:58:20 | 2ndInstance_testPreventMultipleAccessToDatafile | Close DataHandler
