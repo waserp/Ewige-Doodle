@@ -6,7 +6,7 @@ class Cookie
 
   public function Cookie()
   {
-    $Cookiename = $_COOKIE["KlimperName"];
+    $Cookiename = @$_COOKIE["KlimperName"];
     $this->Cookiename = @trim($Cookiename);
   }
 

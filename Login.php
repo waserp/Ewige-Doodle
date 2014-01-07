@@ -15,7 +15,7 @@
     header("Location: EwigaDuudel.php");
   }
 
-  if($_POST['formSubmit'] == "Submit") {
+  if(@$_POST['formSubmit'] == "Submit") {
     if (!empty($_POST['Name'])) {
       $Klimper = $_POST['Name'];
       $Cookie->SetCookie($Klimper);
@@ -40,8 +40,8 @@
   echo $HTML->GetPageTitle($PageTitle);
   $LoginForm = new FormHandler("post", "Loginform");
   $LoginForm->AddElement("text", "Name", "", "*Name");
-  $LoginForm->AddElement("text", "Email", "", "Email");
-  $LoginForm->AddElement("text", "EmailConfirm", "", "Email confirmation");
+//  $LoginForm->AddElement("text", "Email", "", "Email");
+//  $LoginForm->AddElement("text", "EmailConfirm", "", "Email confirmation");
   $LoginForm->AddElement("submit", "formSubmit", "Submit");
   echo $LoginForm->StartForm();
   echo $LoginForm->GetForm();
