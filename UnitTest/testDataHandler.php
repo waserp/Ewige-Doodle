@@ -53,19 +53,6 @@ class testDataHandler extends PHPUnit_Framework_TestCase
     $this->assertFalse($DataHandler->IsKlimperInDatabase("Kurt"));
   }
 
-  public function testAddNewEmptyKlimperDataset()
-  {
-  	$DataHandler = new CDataHandler("1stInstance_testAddNewEmptyKlimperDataset");
-  	$DataHandler->AddNewEmptyKlimperDataset("Kurt");
-    // set up new DataHandler to ensure that the new dataset is saved in file
-  	unset($DataHandler);
-   	$DataHandler = new CDataHandler("2ndInstance_testAddNewEmptyKlimperDataset");
-  	$this->assertTrue($DataHandler->IsKlimperInDatabase("Kurt"));
-  	$ExpectedString = "Kurt,,,,,,,";
-  	$ActualString = $DataHandler->GetKlimperString("Kurt");
-  	$this->assertEquals($ExpectedString, $ActualString);
-  }
-
   public function testIncrementDay()
   {
   	$this->RestoreFiles();

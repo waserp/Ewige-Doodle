@@ -66,8 +66,8 @@ class CDataHandler
 		$NewDataArray = array();
 		$NewDataArrayIndex = 0;
 		foreach ($this->Data as $Key => $LineArray) {
-			$AtLeastOneEntryFound = false;
-			// Magic Number 2 = 1st element is Name, 2nd Element is the old day
+ 			$AtLeastOneEntryFound = false;
+ 			// Magic Number 2 = 1st element is Name, 2nd Element is the old day
 			for ($i = (KLIMPER_DATA_ELEMENT_LAST + 2); $i < count($LineArray); $i++) {
 				$LineArray[$i] = trim($LineArray[$i]);
 				if (!empty($LineArray[$i])) {
@@ -88,6 +88,20 @@ class CDataHandler
 		$this->Data = $NewDataArray;
 	}
 
+	private function GetNumberOfEntries($KlimperData)
+	{
+		$FoundEntries = 0;
+		for ($i = (KLIMPER_DATA_ELEMENT_LAST + 1); $i < count($KlimperData); $i++) {
+			$KlimperData[$i] = trim($KlimperData[$i]);
+			if (!empty($KlimperData[$i])) {
+				$FoundEntries++;
+			}
+		}
+// 		printf("\nClimper " . $KlimperData[0]);
+// 		printf("\nNumbOfEntries: " . $FoundEntries);
+		return $FoundEntries;
+	}
+
 	public function IsKlimperInDatabase($KlimperNameToVerify)
   {
 		foreach ($this->Data as $ActualKlimperData) {
@@ -97,16 +111,6 @@ class CDataHandler
 			}
 		}
 		return false;
-	}
-
-	public function AddNewEmptyKlimperDataset($NewKlimperName)
-	{
-    // add empty day string
-		$EmptyDayString = "";
-		for ($i = 0; $i<AMOUNT_OF_DAYS; $i++) {
-      $EmptyDayString .= ",";
-    }
-		$this->EditLine($NewKlimperName . $EmptyDayString . "\n");
 	}
 
 	// function introduced for testing purpose
@@ -282,13 +286,15 @@ class CDataHandler
 	private function WriteDataToFile()
 	{
     foreach ($this->Data as $LineArray) {
-    	$LineString = "";
-    	for ($i=0; $i<(count($LineArray)-1); $i++) // -1, skip last crlf
-    	{
-        $LineString .= $LineArray[$i].",";
+    	if ($this->GetNumberOfEntries($LineArray) > 0) {
+	    	$LineString = "";
+	    	for ($i=0; $i<(count($LineArray)-1); $i++) // -1, skip last crlf
+	    	{
+	        $LineString .= $LineArray[$i].",";
+	    	}
+	    	$LineString .= "\n";
+	    	fwrite($this->fs, $LineString);
     	}
-    	$LineString .= "\n";
-    	fwrite($this->fs, $LineString);
     }
 	}
 

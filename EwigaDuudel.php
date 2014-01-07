@@ -25,22 +25,6 @@
   }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//   if (@$_POST['formAdvance'] == "Advance") {
-// //    AdvanceADay();
-//     $DataHandler->IncrementDay();
-//   }
-//   $lastaccess = file("lastaccess.csv");
-//   $lastaccess = trim($lastaccess{0});
-//   $todaysday = @date(z);
-//   while($lastaccess != $todaysday) {
-// //    AdvanceADay();
-//     $DataHandler->IncrementDay();
-//     $lastaccess = $lastaccess + 1;
-//   }
-//   $fs = fopen("lastaccess.csv","w");
-//   fwrite($fs,$todaysday);
-//   fclose($fs);
-
   $DataHandler->SetLastAccessAndIncrement();
 
   if (@$_POST['formLogout'] == "Logout") {
