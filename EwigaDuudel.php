@@ -15,58 +15,12 @@
 	$cWeekDays = "Mo,Di,Mi,Do,Fr,Sa,So";
   $cWeekDays = explode(",",$cWeekDays);
 
-//   function AdvanceADay() {
-//     $remaining = 0;
-//     //echo ("Datum : " . date("W") . " " .  $dat . "\n");
-//     $data = file("mydata.csv");
-//     $fs = fopen("mydata.csv","w");
-//     foreach ($data as $line) {
-//       $LineArray = explode(",",$line);
-//       //echo($line);
-//       $flag = "0";
-//       for ($i = 2; $i <= AMOUNT_OF_DAYS; $i++) {
-//         $LineArray[$i]= trim($LineArray[$i]);
-//         if (!empty($LineArray[$i])) { $flag = "1"; }
-//       }
-//       if ($flag == "1") { // only keep entry if there are active dates
-//         $remaining = $remaining + 1;
-//         fwrite($fs,$LineArray[0]);
-//         for ($i = 2; $i <= AMOUNT_OF_DAYS; $i++) {
-//           //echo ($i . " ");
-//           fwrite($fs,"," . trim($LineArray[$i]));
-//         }
-//         fwrite($fs,",\n");
-//       }
-//     }
-//     fclose($fs);
-//   }// end function advanceADay
-
-//   function EditLine($NewLine) {
-//     $Written = false;
-//     $data = file("mydata.csv");
-//     $fs = fopen("mydata.csv","w");
-//     $NewLineArray= explode(",",$NewLine);
-//     foreach ($data as $line) {
-//       $LineArray = explode(",",$line);
-//       if ($NewLineArray[0] == $LineArray[0]) {
-//         fwrite($fs, trim($NewLine) . "\n");
-//         $Written = true;
-//       } else {
-//         fwrite($fs, trim($line) . "\n");
-//       }
-//     }
-//     if (!$Written) {
-//       fwrite($fs, trim($NewLine) . "\n");
-//     }
-//     fclose($fs);
-//   }
-
   function CleanEntry($Entry) {
    $val = trim($Entry);
    $val = trim($val , ",");
    $val = str_replace(",", ":", $val);
    $val = "," . strip_tags($val);
-   $val = substr($val, 0, 30);
+   $val = substr($val, 0, 100);
    return $val;
   }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
