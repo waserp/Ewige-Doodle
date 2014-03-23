@@ -3,14 +3,14 @@
 define("FILE_LAST_ACCESS", "lastaccess.csv");
 define("FILE_DOODLE_DATA", "mydata.csv");
 define("FILE_LOCK", "lock");
-define("KLIMPER_DATA_ELEMENT_NAME", 0);
-define("KLIMPER_DATA_ELEMENT_EMAIL", 1);
-define("KLIMPER_DATA_ELEMENT_LAST", KLIMPER_DATA_ELEMENT_NAME);
+define("USER_DATA_ELEMENT_NAME", 0);
+define("USER_DATA_ELEMENT_EMAIL", 1);
+define("USER_DATA_ELEMENT_LAST", USER_DATA_ELEMENT_NAME);
 define("AMOUNT_OF_DAYS", "7");
 
 class CDataHandler
 {
-  private $Data = array(); // Array of klimper data
+  private $Data = array(); // Array of User data
   private $fs;
   private $Log;
   private $InstanceName = "";
@@ -68,45 +68,43 @@ class CDataHandler
 		foreach ($this->Data as $Key => $LineArray) {
  			$AtLeastOneEntryFound = false;
  			// Magic Number 2 = 1st element is Name, 2nd Element is the old day
-			for ($i = (KLIMPER_DATA_ELEMENT_LAST + 2); $i < count($LineArray); $i++) {
+			for ($i = (USER_DATA_ELEMENT_LAST + 2); $i < count($LineArray); $i++) {
 				$LineArray[$i] = trim($LineArray[$i]);
 				if (!empty($LineArray[$i])) {
 					$AtLeastOneEntryFound = true;
 				}
 			}
 			if ($AtLeastOneEntryFound) { // only keep entry if there are active dates
-        $NewKlimperArray = array();
-				$NewKlimperArray[KLIMPER_DATA_ELEMENT_NAME] = $LineArray[KLIMPER_DATA_ELEMENT_NAME];
-				for ($i = (KLIMPER_DATA_ELEMENT_LAST + 2); $i < (count($LineArray)-1); $i++) {
-					$NewKlimperArray[KLIMPER_DATA_ELEMENT_LAST + $i - 1] = $LineArray[$i];
+        $NewUserArray = array();
+				$NewUserArray[USER_DATA_ELEMENT_NAME] = $LineArray[USER_DATA_ELEMENT_NAME];
+				for ($i = (USER_DATA_ELEMENT_LAST + 2); $i < (count($LineArray)-1); $i++) {
+					$NewUserArray[USER_DATA_ELEMENT_LAST + $i - 1] = $LineArray[$i];
 				}
-				$NewKlimperArray[count($LineArray)-2] = "";
-				$NewKlimperArray[count($LineArray)-1] = $LineArray[count($LineArray)-1]; // copy \n
-        $NewDataArray[$NewDataArrayIndex++] = $NewKlimperArray;
+				$NewUserArray[count($LineArray)-2] = "";
+				$NewUserArray[count($LineArray)-1] = $LineArray[count($LineArray)-1]; // copy \n
+        $NewDataArray[$NewDataArrayIndex++] = $NewUserArray;
 			}
 		}
 		$this->Data = $NewDataArray;
 	}
 
-	private function GetNumberOfEntries($KlimperData)
+	private function GetNumberOfEntries($UserData)
 	{
 		$FoundEntries = 0;
-		for ($i = (KLIMPER_DATA_ELEMENT_LAST + 1); $i < count($KlimperData); $i++) {
-			$KlimperData[$i] = trim($KlimperData[$i]);
-			if (!empty($KlimperData[$i])) {
+		for ($i = (USER_DATA_ELEMENT_LAST + 1); $i < count($UserData); $i++) {
+			$UserData[$i] = trim($UserData[$i]);
+			if (!empty($UserData[$i])) {
 				$FoundEntries++;
 			}
 		}
-// 		printf("\nClimper " . $KlimperData[0]);
-// 		printf("\nNumbOfEntries: " . $FoundEntries);
 		return $FoundEntries;
 	}
 
-	public function IsKlimperInDatabase($KlimperNameToVerify)
+	public function IsUserInDatabase($UserNameToVerify)
   {
-		foreach ($this->Data as $ActualKlimperData) {
-      $ActualKlimperName = $ActualKlimperData[KLIMPER_DATA_ELEMENT_NAME];
-			if ($ActualKlimperName == $KlimperNameToVerify) {
+		foreach ($this->Data as $ActualUserData) {
+      $ActualUserName = $ActualUserData[USER_DATA_ELEMENT_NAME];
+			if ($ActualUserName == $UserNameToVerify) {
 				return true;
 			}
 		}
@@ -114,18 +112,18 @@ class CDataHandler
 	}
 
 	// function introduced for testing purpose
-	public function GetKlimperString($Klimper)
+	public function GetUserString($User)
 	{
-		foreach ($this->Data as $ActualKlimperData) {
-			$ActualKlimperName = $ActualKlimperData[KLIMPER_DATA_ELEMENT_NAME];
-			if ($ActualKlimperName == $Klimper) {
-				return $this->ConvertKlimperArrayToString($ActualKlimperData);
+		foreach ($this->Data as $ActualUserData) {
+			$ActualUserName = $ActualUserData[USER_DATA_ELEMENT_NAME];
+			if ($ActualUserName == $User) {
+				return $this->ConvertUserArrayToString($ActualUserData);
 			}
 		}
 		return "";
 	}
 
-	private function ConvertKlimperArrayToString($DataSet)
+	private function ConvertUserArrayToString($DataSet)
 	{
 		$OutpurtString = "";
 		for ($i=0; $i < (count($DataSet) - 1); $i++) { // explaining the -1: do not fill last element which contains the delimiter '\n'
@@ -168,24 +166,24 @@ class CDataHandler
 		return $val;
 	}
 
-	public function EditLine($KlimperToEdit) { // KlimperToEdit: cs String
+	public function EditLine($UserToEdit) { // UserToEdit: cs String
     $Written = false;
-		$KlimperToEditArray = $this->KlimperDataStringToArray($KlimperToEdit);
-		foreach ($this->Data as &$ActualKlimperArray) {
-			if ($KlimperToEditArray[KLIMPER_DATA_ELEMENT_NAME] == $ActualKlimperArray[KLIMPER_DATA_ELEMENT_NAME]) {
-				$ActualKlimperArray = $KlimperToEditArray;
+		$UserToEditArray = $this->UserDataStringToArray($UserToEdit);
+		foreach ($this->Data as &$ActualUserArray) {
+			if ($UserToEditArray[USER_DATA_ELEMENT_NAME] == $ActualUserArray[USER_DATA_ELEMENT_NAME]) {
+				$ActualUserArray = $UserToEditArray;
 				$Written = true;
 			}
 		}
-		// Write new klimper
+		// Write new User
 		if (!$Written) {
-      array_push($this->Data, $KlimperToEditArray);
+      array_push($this->Data, $UserToEditArray);
 		}
 	}
 
-  private function KlimperDataStringToArray($KlimperDataString)
+  private function UserDataStringToArray($UserDataString)
   {
-  	$Array = explode(",",$KlimperDataString);
+  	$Array = explode(",",$UserDataString);
   	return $Array;
   }
 
@@ -199,9 +197,9 @@ class CDataHandler
     }
     if ($this->GetLock($this->fs)) {
 	    $i = 0;
-	    foreach ($DataStringArray as $KlimperDataString) {
-	      $KlimperArray = explode(",", $KlimperDataString);
-	      $this->Data[$i] = $KlimperArray;
+	    foreach ($DataStringArray as $UserDataString) {
+	      $UserArray = explode(",", $UserDataString);
+	      $this->Data[$i] = $UserArray;
 	      $i++;
       }
     }
@@ -211,11 +209,11 @@ class CDataHandler
     return true;
   }
 
-  public function GetNextClimper(&$NexClimperArray)
+  public function GetNextUser(&$NexUserArray)
   {
   	static $Index = 0;
   	if (count($this->Data) > $Index) {
-  		$NexClimperArray = $this->Data[$Index++];
+  		$NexUserArray = $this->Data[$Index++];
   		return true;
   	}
   	else {

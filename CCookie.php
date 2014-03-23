@@ -6,7 +6,7 @@ class Cookie
 
   public function Cookie()
   {
-    $Cookiename = @$_COOKIE["KlimperName"];
+    $Cookiename = @$_COOKIE["UserName"];
     $this->Cookiename = @trim($Cookiename);
   }
 
@@ -18,7 +18,7 @@ class Cookie
     return true;
   }
 
-  function GetClimperName()
+  function GetUserName()
   {
   	if ($this->CheckCookieExists()) {
   		return $this->Cookiename;
@@ -30,7 +30,7 @@ class Cookie
 
   public function SetCookie($CookieValue)
   {
-    setcookie("KlimperName", $CookieValue , time() + 3600 * 24 * 365);
+    setcookie("UserName", $CookieValue , time() + 3600 * 24 * 365);
   }
 
   public function DeleteCookie()

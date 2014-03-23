@@ -17,8 +17,8 @@
 
   if(@$_POST['formSubmit'] == "Submit") {
     if (!empty($_POST['Name'])) {
-      $Klimper = $_POST['Name'];
-      $Cookie->SetCookie($Klimper);
+      $User = $_POST['Name'];
+      $Cookie->SetCookie($User);
       if (!empty($_POST['Email'])) {
         if ($_POST['Email'] == $_POST['EmailConfirm']) {
         	$Email = $_POST['Email'];

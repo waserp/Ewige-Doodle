@@ -94,7 +94,7 @@ class CCell
 {
 	const COLOR_NO_I_CANT = "FF6600"; // FF8080
 	const COLOR_YES_I_CAN = "99CC00"; // 80FF80
-	const COLOR_CLIMPER = "6666FF"; // E0EFEF
+	const COLOR_USER = "6666FF"; // E0EFEF
 	const COLOR_HEADER = "0099FF"; // E0EFEF
 
 	private $m_Content = "";

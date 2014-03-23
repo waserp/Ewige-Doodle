@@ -10,7 +10,7 @@
 
   $HTML = new HTMLOut();
   $Cookie = new Cookie();
-  $DataHandler = new CDataHandler($Cookie->GetClimperName());
+  $DataHandler = new CDataHandler($Cookie->GetUserName());
 
 	$cWeekDays = "Mo,Di,Mi,Do,Fr,Sa,So";
   $cWeekDays = explode(",",$cWeekDays);
@@ -41,7 +41,7 @@
   }
 
   if(@$_POST['formSubmit'] == "Submit") {
-      $DataString = $Cookie->GetClimperName();
+      $DataString = $Cookie->GetUserName();
       for ($Day = 1; $Day <= $DataHandler->GetAmountOfDays(); $Day++) {
       	$DataString .= CleanEntry($_POST['ck'.$Day]);
       }
@@ -51,12 +51,12 @@
   }
 
   $Table = new DoodleTable();
-  $Form = new FormHandler("post", "Klimperform");
+  $Form = new FormHandler("post", "Userform");
 
   $ActualWeekDay = @date(N);
 
   // Generate Header with the days
-  $Table->AddSingleCell("Klimper", CCell::COLOR_HEADER);
+  $Table->AddSingleCell("User", CCell::COLOR_HEADER);
   for ($i = $ActualWeekDay; $i <= ($ActualWeekDay + ($DataHandler->GetAmountOfDays() -1)); $i++) {
     $Index = $i % 7;
     $Table->AddSingleCell($cWeekDays[$Index], CCell::COLOR_HEADER);
@@ -64,21 +64,21 @@
   $Table->AddRow($Table->GetCellArray(), RowType::Header);
 
 
-  $ClimperAlreadyInDatabases = false;
+  $UserAlreadyInDatabases = false;
   $LineArray = array();
-  while ($DataHandler->GetNextClimper($LineArray)) {
+  while ($DataHandler->GetNextUser($LineArray)) {
 		$PrintLine = true;
 
-    if ($LineArray[0] == $Cookie->GetClimperName()) {
-      $ClimperAlreadyInDatabases = true;
+    if ($LineArray[0] == $Cookie->GetUserName()) {
+      $UserAlreadyInDatabases = true;
       if (!$Editrequest) {
         $Form->AddFunctionElement("submit", "formEdit", "Edit");
       }
       else {
       	$PrintLine = false;
         $LineArrayToEdit = $LineArray;
-        // Generate Input boxes in case Climper asked to edit his data
-		    GenerateInputboxForEdit($Table, $Form, $Cookie->GetClimperName(), $LineArrayToEdit);
+        // Generate Input boxes in case User asked to edit his data
+		    GenerateInputboxForEdit($Table, $Form, $Cookie->GetUserName(), $LineArrayToEdit);
       }
     }
 
@@ -96,9 +96,9 @@
     }
   }
 
-  if (!$ClimperAlreadyInDatabases) {
-    // Generate Input boxes in case Climper was not found in the Database
-  	GenerateInputboxForEdit($Table, $Form, $Cookie->GetClimperName(), "");
+  if (!$UserAlreadyInDatabases) {
+    // Generate Input boxes in case User was not found in the Database
+  	GenerateInputboxForEdit($Table, $Form, $Cookie->GetUserName(), "");
   }
 
 
@@ -112,7 +112,7 @@
 			}
   		$Form->AddElement("text", "ck".$Day, $Value);
 		}
-		$Table->AddMultipleCell($Form->GetElementArrayString(), CCell::COLOR_CLIMPER);
+		$Table->AddMultipleCell($Form->GetElementArrayString(), CCell::COLOR_USER);
 		$Table->AddRow($Table->GetCellArray());
     $Form->AddFunctionElement("submit", "formSubmit", "Submit");
   }
@@ -125,7 +125,7 @@
   $PageTitle = "Ewiger Doodle";
   echo $HTML->GetHeader($PageTitle);
   echo $HTML->GetPageTitle($PageTitle);
-  echo "<h2>You are logged on as <b>". $Cookie->GetClimperName() . "</b></h2>\n";
+  echo "<h2>You are logged on as <b>". $Cookie->GetUserName() . "</b></h2>\n";
 
   echo ("<p>You can stay logged on if you want to.</p>\n");
   if (!$DataHandler->GetDataReadResult()) {

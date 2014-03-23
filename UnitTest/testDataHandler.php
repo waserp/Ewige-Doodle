@@ -13,18 +13,18 @@ class testDataHandler extends PHPUnit_Framework_TestCase
   	$this->RestoreFiles();
   }
 
-  public function testGetNextClimper()
+  public function testGetNextUser()
   {
-  	$DataHandler = new CDataHandler("testGetNextClimper");
-  	$ClimperArray = array();
-  	$this->assertTrue($DataHandler->GetNextClimper($ClimperArray));
-  	$this->assertEquals(9, count($ClimperArray));
-  	$this->assertEquals("Franz", $ClimperArray[0]);
-  	$this->assertTrue($DataHandler->GetNextClimper($ClimperArray));
-  	$this->assertEquals("Fritz", $ClimperArray[0]);
-  	$this->assertTrue($DataHandler->GetNextClimper($ClimperArray));
-  	$this->assertEquals("Peter", $ClimperArray[0]);
-  	$this->assertFalse($DataHandler->GetNextClimper($ClimperArray));
+  	$DataHandler = new CDataHandler("testGetNextUser");
+  	$UserArray = array();
+  	$this->assertTrue($DataHandler->GetNextUser($UserArray));
+  	$this->assertEquals(9, count($UserArray));
+  	$this->assertEquals("Franz", $UserArray[0]);
+  	$this->assertTrue($DataHandler->GetNextUser($UserArray));
+  	$this->assertEquals("Fritz", $UserArray[0]);
+  	$this->assertTrue($DataHandler->GetNextUser($UserArray));
+  	$this->assertEquals("Peter", $UserArray[0]);
+  	$this->assertFalse($DataHandler->GetNextUser($UserArray));
   }
 
   public function testEditLine()
@@ -41,16 +41,16 @@ class testDataHandler extends PHPUnit_Framework_TestCase
 //     $DataHandler = new CDataHandler("1stInstance_testGetLastAccess");
 //   }
 
-  public function testIsClimperInDatabasePositive()
+  public function testIsUserInDatabasePositive()
   {
-    $DataHandler = new CDataHandler("1stInstance_testIsClimperInDatabasePositive");
-    $this->assertTrue($DataHandler->IsKlimperInDatabase("Franz"));
+    $DataHandler = new CDataHandler("1stInstance_testIsUserInDatabasePositive");
+    $this->assertTrue($DataHandler->IsUserInDatabase("Franz"));
   }
 
-  public function testIsClimperInDatabaseNegative()
+  public function testIsUserInDatabaseNegative()
   {
-    $DataHandler = new CDataHandler("1stInstance_testIsClimperInDatabaseNegative");
-    $this->assertFalse($DataHandler->IsKlimperInDatabase("Kurt"));
+    $DataHandler = new CDataHandler("1stInstance_testIsUserInDatabaseNegative");
+    $this->assertFalse($DataHandler->IsUserInDatabase("Kurt"));
   }
 
   public function testIncrementDay()
@@ -63,7 +63,7 @@ class testDataHandler extends PHPUnit_Framework_TestCase
     copy(FILE_DOODLE_DATA, FILE_DOODLE_DATA.".test");
    	$this->assertFileEquals("mydata_IncrementDay.csv", FILE_DOODLE_DATA);
    	$DataHandler = new CDataHandler("2ndInstance_testIncrementDay");
-    $this->assertFalse($DataHandler->IsKlimperInDatabase("Franz")); // After increment for Franz no entry is left
+    $this->assertFalse($DataHandler->IsUserInDatabase("Franz")); // After increment for Franz no entry is left
   }
 
   public function testPreventMultipleAccessToDatafile()

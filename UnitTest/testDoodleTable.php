@@ -11,7 +11,7 @@ class testDoodleTable extends PHPUnit_Framework_TestCase
 
   	$Array = array("H1", "H2", "H3");
   	for ($i=0; $i < sizeof($Array); $i++) {
-  		$Table->AddSingleCell($Array[$i], CCell::COLOR_CLIMPER);
+  		$Table->AddSingleCell($Array[$i], CCell::COLOR_USER);
   	}
 
   	$ActualArray = $Table->GetCellArray();
@@ -30,7 +30,7 @@ class testDoodleTable extends PHPUnit_Framework_TestCase
 
   	$Array = array("H1", "H2", "H3");
   	for ($i=0; $i < sizeof($Array); $i++) {
-  		$Table->AddSingleCell($Array[$i], CCell::COLOR_CLIMPER);
+  		$Table->AddSingleCell($Array[$i], CCell::COLOR_USER);
   	}
 		$ActualArray = $Table->GetCellArray();
 		$this->assertEquals(sizeof($Array), sizeof($ActualArray));
@@ -41,7 +41,7 @@ class testDoodleTable extends PHPUnit_Framework_TestCase
 		}
 		// test the second time, reset function must have emptyed the array
   	for ($i=0; $i < sizeof($Array); $i++) {
-  		$Table->AddSingleCell($Array[$i], CCell::COLOR_CLIMPER);
+  		$Table->AddSingleCell($Array[$i], CCell::COLOR_USER);
   	}
   	$ActualArray = $Table->GetCellArray();
 		$this->assertEquals(sizeof($Array), sizeof($ActualArray));
