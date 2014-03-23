@@ -2,7 +2,7 @@ FONT										{ FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 14ph; }
 TABLE										{ vertical-align: top; }
 TH											{ FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12ph; background-color: #FFFFFF; }
 TD											{ FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12ph; vertical-align: top; }
-BODY										{ FONT-FAMILY: Verdana,Helvetica;                  BACKGROUND-COLOR: #888888; margin-top:5px; }
+BODY										{ FONT-FAMILY: Verdana,Helvetica;                  BACKGROUND-COLOR: #FFFFFF; margin-top:5px; }
 P												{ FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12ph; }
 DIV											{ FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12ph; }
 HR											{ COLOR: #000000; }
