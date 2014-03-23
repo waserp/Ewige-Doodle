@@ -8,6 +8,9 @@
   include 'CDoodleTable.php';
   include 'CDataHandler.php';
 
+  define("SPORTCLUB", "Gleitschrim");
+  define("ATHLETE", "Pilot");
+
   $HTML = new HTMLOut();
   $Cookie = new Cookie();
   $DataHandler = new CDataHandler($Cookie->GetUserName());
@@ -56,7 +59,7 @@
   $ActualWeekDay = @date(N);
 
   // Generate Header with the days
-  $Table->AddSingleCell("User", CCell::COLOR_HEADER);
+  $Table->AddSingleCell(ATHLETE, CCell::COLOR_HEADER);
   for ($i = $ActualWeekDay; $i <= ($ActualWeekDay + ($DataHandler->GetAmountOfDays() -1)); $i++) {
     $Index = $i % 7;
     $Table->AddSingleCell($cWeekDays[$Index], CCell::COLOR_HEADER);
@@ -122,7 +125,7 @@
   //////////////////////////////////////////////////////////////////////////////////////////////
   // Output
 
-  $PageTitle = "Ewiger Doodle";
+  $PageTitle = "Ewiger " . SPORTCLUB . " Doodle";
   echo $HTML->GetHeader($PageTitle);
   echo $HTML->GetPageTitle($PageTitle);
   echo "<h2>You are logged on as <b>". $Cookie->GetUserName() . "</b></h2>\n";
@@ -141,14 +144,14 @@
 	echo $Form->CloseForm();
   echo ("<p class=\"footmsg_l\"><i>Server Date " . @date(r) . "</i></p>");
 
-  /// Chat
-  $ChatForm = new FormHandler("post", "Chatform");
-  $ChatForm->AddElement("text", "NewChatEntry", "", "Enter Chat Text");
-  $ChatForm->AddFunctionElement("submit", "formSaveChat", "Submit");
-  echo $ChatForm->StartForm();
-  echo $ChatForm->GetForm();
-  echo $ChatForm->GetFunctionElementString();
-  echo $ChatForm->CloseForm();
+//   /// Chat
+//   $ChatForm = new FormHandler("post", "Chatform");
+//   $ChatForm->AddElement("text", "NewChatEntry", "", "Enter Chat Text");
+//   $ChatForm->AddFunctionElement("submit", "formSaveChat", "Submit");
+//   echo $ChatForm->StartForm();
+//   echo $ChatForm->GetForm();
+//   echo $ChatForm->GetFunctionElementString();
+//   echo $ChatForm->CloseForm();
 
 	echo $HTML->ClosingHtml();
 
