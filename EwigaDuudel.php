@@ -33,6 +33,7 @@
   }
   if (!$Cookie->CheckCookieExists()) {
     header("Location: Login.php");
+    exit(0);
   }
   $Editrequest = false;
   if (@$_POST['formEdit'] == "Edit") {
@@ -45,6 +46,8 @@
       	$DataString .= CleanEntry($_POST['ck'.$Day]);
       }
       $DataHandler->EditLine($DataString);
+    header("Location: Login.php");
+    exit(0);
   }
 
   $Table = new DoodleTable();
@@ -83,10 +86,8 @@
 	    foreach ($LineArray as $Element) {
 	      $Element = trim($Element);
 	      if (!empty($Element)) {
-//	        $color = "style=\"background-color:#80FF80\"";
 	        $Color = CCell::COLOR_YES_I_CAN;
 	      } else {
-//	        $color = "style=\"background-color:#FF8080\"";
 	        $Color = CCell::COLOR_NO_I_CANT;
 	      }
 				$Table->AddSingleCell($Element, $Color);
@@ -139,6 +140,16 @@
   echo "<a href=\"\">" . $Refreshtext . "</a>";
 	echo $Form->CloseForm();
   echo ("<p class=\"footmsg_l\"><i>Server Date " . @date(r) . "</i></p>");
+
+  /// Chat
+  $ChatForm = new FormHandler("post", "Chatform");
+  $ChatForm->AddElement("text", "NewChatEntry", "", "Enter Chat Text");
+  $ChatForm->AddFunctionElement("submit", "formSaveChat", "Submit");
+  echo $ChatForm->StartForm();
+  echo $ChatForm->GetForm();
+  echo $ChatForm->GetFunctionElementString();
+  echo $ChatForm->CloseForm();
+
 	echo $HTML->ClosingHtml();
 
 ?>
