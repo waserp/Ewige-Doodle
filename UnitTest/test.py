@@ -9,6 +9,7 @@ os.system("phpunit testDoodleTable.php >> TestResult.log")
 os.system("phpunit testElement.php >> TestResult.log")
 os.system("phpunit testFormHandler.php >> TestResult.log")
 os.system("phpunit testDataHandler.php >> TestResult.log")
+os.system("phpunit testEwigerChat.php >> TestResult.log")
 
 os.system("cat TestResult.log")
 
