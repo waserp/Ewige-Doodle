@@ -9,7 +9,7 @@
   $Cookie = new Cookie();
 
   if ($Cookie->CheckCookieExists()) {
-    header("Location: EwigaDuudel.php");
+    header("Location: index.php");
   }
 
   if(@$_POST['formSubmit'] == "Submit") {
@@ -24,7 +24,7 @@
           $Email = "";
         }
       }
-      header("Location: EwigaDuudel.php");
+      header("Location: index.php");
     }
   }
 
