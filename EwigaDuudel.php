@@ -5,7 +5,7 @@
   include 'CDoodleTable.php';
   include 'CDataHandler.php';
 
-  define("SPORTCLUB", "Gleitschrim");
+  define("SPORTCLUB", "Fussball");
   define("ATHLETE", "Pilot");
 
   $HTML = new HTMLOut();
