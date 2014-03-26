@@ -198,6 +198,7 @@ class CDataHandler
     if ($this->GetLock($this->fs)) {
 	    $i = 0;
 	    foreach ($DataStringArray as $UserDataString) {
+	    	$UserDataString = str_replace(array("\r\n", "\r", "\n"), '', $UserDataString);
 	      $UserArray = explode(",", $UserDataString);
 	      $this->Data[$i] = $UserArray;
 	      $i++;
@@ -286,10 +287,11 @@ class CDataHandler
     foreach ($this->Data as $LineArray) {
     	if ($this->GetNumberOfEntries($LineArray) > 0) {
 	    	$LineString = "";
-	    	for ($i=0; $i<(count($LineArray)-1); $i++) // -1, skip last crlf
+	    	for ($i=0; $i<(count($LineArray)); $i++)
 	    	{
 	        $LineString .= $LineArray[$i].",";
 	    	}
+	    	$LineString = substr($LineString, 0, -1); // remove last comma
 	    	$LineString .= "\n";
 	    	fwrite($this->fs, $LineString);
     	}

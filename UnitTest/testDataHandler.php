@@ -18,7 +18,7 @@ class testDataHandler extends PHPUnit_Framework_TestCase
   	$DataHandler = new CDataHandler("testGetNextUser");
   	$UserArray = array();
   	$this->assertTrue($DataHandler->GetNextUser($UserArray));
-  	$this->assertEquals(9, count($UserArray));
+  	$this->assertEquals(8, count($UserArray));
   	$this->assertEquals("Franz", $UserArray[0]);
   	$this->assertTrue($DataHandler->GetNextUser($UserArray));
   	$this->assertEquals("Fritz", $UserArray[0]);
@@ -30,7 +30,7 @@ class testDataHandler extends PHPUnit_Framework_TestCase
   public function testEditLine()
   {
   	$DataHandler = new CDataHandler("1stInstance_testEditLine");
-  	$EditString = "Fritz,MO,DI,,,,,,";
+  	$EditString = "Fritz,MO,DI,,,,,";
   	$DataHandler->EditLine($EditString);
   	unset($DataHandler);
   	$this->assertFileEquals("mydata_EditLine.csv", FILE_DOODLE_DATA);
@@ -84,6 +84,17 @@ class testDataHandler extends PHPUnit_Framework_TestCase
     $DataReadSuccessful = false;
     $DataReadSuccessful = $DataHandler2->LoadData();
     $this->assertTrue($DataReadSuccessful, "Test Resource now availlable again");
+  }
+
+  public function testEditLastColumn()
+  {
+  	$this->RestoreFiles();
+  	$DataHandler = new CDataHandler("test_EditLastColumn");
+  	$EditString = "Fritz,MO,DI,,,,,SO";
+  	$DataHandler->EditLine($EditString);
+  	unset($DataHandler);
+  	$this->assertFileEquals("mydata_EditLastColumn.csv", FILE_DOODLE_DATA, "EditLastColumn failed");
+
   }
 
   private function BackupFiles()
