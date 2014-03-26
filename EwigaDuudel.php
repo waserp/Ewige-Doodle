@@ -12,9 +12,6 @@
   $Cookie = new Cookie();
   $DataHandler = new CDataHandler($Cookie->GetUserName());
 
-	$cWeekDays = "Mo,Di,Mi,Do,Fr,Sa,So";
-  $cWeekDays = explode(",",$cWeekDays);
-
   function CleanEntry($Entry) {
    $val = trim($Entry);
    $val = trim($val , ",");
@@ -53,13 +50,13 @@
   $Table = new DoodleTable();
   $Form = new FormHandler("post", "Userform");
 
-  $ActualWeekDay = @date(N);
-
   // Generate Header with the days
   $Table->AddSingleCell(ATHLETE, CCell::COLOR_HEADER);
-  for ($i = $ActualWeekDay; $i <= ($ActualWeekDay + ($DataHandler->GetAmountOfDays() -1)); $i++) {
-    $Index = $i % 7;
-    $Table->AddSingleCell($cWeekDays[$Index], CCell::COLOR_HEADER);
+  for ($i = 0; $i <= ($DataHandler->GetAmountOfDays() -1); $i++) {
+  	$Index = $i;
+    $DayToPrint = mktime(0,0,0,date("m"),date("d")+$Index,date("Y"));
+    $DayText = date("D d-M-Y", $DayToPrint);
+    $Table->AddSingleCell($DayText, CCell::COLOR_HEADER);
   }
   $Table->AddRow($Table->GetCellArray(), RowType::Header);
 
