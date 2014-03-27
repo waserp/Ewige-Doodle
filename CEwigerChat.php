@@ -28,9 +28,14 @@ class CEwigerChat
 		return $this->ChatData;
 	}
 
-	public function AddComment($NewText)
+	public function AddComment($NewText, $User="")
 	{
-    $ChatData = $NewText."\n\n";
+		$ChatData = date('d-M-Y H:i');
+		if ($User != "") {
+			$ChatData .= ", " . $User;
+		}
+		$ChatData .= ":\n";
+    $ChatData .= $NewText."\n\n";
 		$ChatData .= file_get_contents(FILE_CHAT_DATA);
 		file_put_contents(FILE_CHAT_DATA, $ChatData);
 	}

@@ -4,6 +4,7 @@
   include 'CCookie.php';
   include 'CDoodleTable.php';
   include 'CDataHandler.php';
+  include 'CEwigerChat.php';
 
   define("SPORTCLUB", "Gleitschrim");
   define("ATHLETE", "Pilot");
@@ -37,7 +38,13 @@
     $Editrequest = true;
   }
 
-  if(@$_POST['formSubmit'] == "Submit") {
+  if (@$_POST['formSaveChat'] == "Submit") {
+    $Chat = new CEwigerChat();
+    $Chat->AddComment($_POST['NewChatEntry'], $Cookie->GetUserName());
+    unset($Chat);
+  }
+
+  if (@$_POST['formSubmit'] == "Submit") {
       $DataString = $Cookie->GetUserName();
       for ($Day = 1; $Day <= $DataHandler->GetAmountOfDays(); $Day++) {
       	$DataString .= CleanEntry($_POST['ck'.$Day]);
@@ -138,14 +145,16 @@
 	echo $Form->CloseForm();
   echo ("<p class=\"footmsg_l\"><i>Server Date " . @date(r) . "</i></p>");
 
-//   /// Chat
-//   $ChatForm = new FormHandler("post", "Chatform");
-//   $ChatForm->AddElement("text", "NewChatEntry", "", "Enter Chat Text");
-//   $ChatForm->AddFunctionElement("submit", "formSaveChat", "Submit");
-//   echo $ChatForm->StartForm();
-//   echo $ChatForm->GetForm();
-//   echo $ChatForm->GetFunctionElementString();
-//   echo $ChatForm->CloseForm();
+  /// Chat
+  $ChatForm = new FormHandler("post", "Chatform");
+  $ChatForm->AddElement("text", "NewChatEntry", "", "Enter Chat Text");
+  $ChatForm->AddFunctionElement("submit", "formSaveChat", "Submit");
+  echo $ChatForm->StartForm();
+  echo $ChatForm->GetForm();
+  echo $ChatForm->GetFunctionElementString();
+  echo $ChatForm->CloseForm();
+  $Chat = new CEwigerChat();
+  echo nl2br($Chat->GetText());
 
 	echo $HTML->ClosingHtml();
 
