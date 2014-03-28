@@ -143,19 +143,35 @@
   if ($Editrequest) { $Refreshtext = "cancle"; }
   echo "<a href=\"\">" . $Refreshtext . "</a>";
 	echo $Form->CloseForm();
-  echo ("<p class=\"footmsg_l\"><i>Server Date " . @date(r) . "</i></p>");
 
   /// Chat
+  echo "<h2>Ewiger Chat</h2>";
   $ChatForm = new FormHandler("post", "Chatform");
-  $ChatForm->AddElement("text", "NewChatEntry", "", "Enter Chat Text");
   $ChatForm->AddFunctionElement("submit", "formSaveChat", "Submit");
   echo $ChatForm->StartForm();
   echo $ChatForm->GetForm();
+  echo "<input disabled  maxlength=\"3\" size=\"3\" value=\"160\" id=\"counter\">";
+  echo "<input type=\"text\" onkeyup=\"textCounter(this,'counter',160);\" id=\"message\" name=\"NewChatEntry\" size=\"80\">";
   echo $ChatForm->GetFunctionElementString();
   echo $ChatForm->CloseForm();
+  echo "<hr>";
   $Chat = new CEwigerChat();
   echo nl2br($Chat->GetText());
 
-	echo $HTML->ClosingHtml();
-
+  echo "<hr>";
+  echo ("<p class=\"footmsg_l\"><i>Server Date " . @date(r) . "</i></p>");
+  echo $HTML->ClosingHtml();
 ?>
+
+	<script>
+	function textCounter(field,field2,maxlimit)
+	{
+		var countfield = document.getElementById(field2);
+		if ( field.value.length > maxlimit ) {
+			field.value = field.value.substring( 0, maxlimit );
+			return false;
+		} else {
+			countfield.value = maxlimit - field.value.length;
+		}
+	}
+	</script>
