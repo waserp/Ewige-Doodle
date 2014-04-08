@@ -6,7 +6,7 @@
   include 'CDataHandler.php';
   include 'CEwigerChat.php';
 
-  define("SPORTCLUB", "Gleitschrim");
+  define("SPORTCLUB", "Gleitschirm");
   define("ATHLETE", "Pilot");
 
   $HTML = new HTMLOut();
