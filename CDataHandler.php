@@ -77,11 +77,11 @@ class CDataHandler
 			if ($AtLeastOneEntryFound) { // only keep entry if there are active dates
         $NewUserArray = array();
 				$NewUserArray[USER_DATA_ELEMENT_NAME] = $LineArray[USER_DATA_ELEMENT_NAME];
-				for ($i = (USER_DATA_ELEMENT_LAST + 2); $i < (count($LineArray)-1); $i++) {
+				for ($i = (USER_DATA_ELEMENT_LAST + 2); $i < (count($LineArray)); $i++) {
 					$NewUserArray[USER_DATA_ELEMENT_LAST + $i - 1] = $LineArray[$i];
 				}
-				$NewUserArray[count($LineArray)-2] = "";
-				$NewUserArray[count($LineArray)-1] = $LineArray[count($LineArray)-1]; // copy \n
+				// New last day is always empty
+				$NewUserArray[count($LineArray)-1] = "";
         $NewDataArray[$NewDataArrayIndex++] = $NewUserArray;
 			}
 		}
