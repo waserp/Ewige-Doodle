@@ -15,6 +15,8 @@
   if(@$_POST['formSubmit'] == "Submit") {
     if (!empty($_POST['Name'])) {
       $User = $_POST['Name'];
+      $User = strtolower($User);  // added without testing PWa 2.4.2015
+      $User = ucfirst($User);  // added without testing PWa 2.4.2015
       $Cookie->SetCookie($User);
       if (!empty($_POST['Email'])) {
         if ($_POST['Email'] == $_POST['EmailConfirm']) {
